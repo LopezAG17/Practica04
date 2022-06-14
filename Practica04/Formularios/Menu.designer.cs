@@ -95,7 +95,7 @@
       this.btnSap.FlatAppearance.BorderSize = 0;
       this.btnSap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
       this.btnSap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.btnSap.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btnSap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnSap.ForeColor = System.Drawing.Color.White;
       this.btnSap.Image = ((System.Drawing.Image)(resources.GetObject("btnSap.Image")));
       this.btnSap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +113,7 @@
       this.btnECorreo.FlatAppearance.BorderSize = 0;
       this.btnECorreo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
       this.btnECorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.btnECorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btnECorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnECorreo.ForeColor = System.Drawing.Color.White;
       this.btnECorreo.Image = ((System.Drawing.Image)(resources.GetObject("btnECorreo.Image")));
       this.btnECorreo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,11 +130,11 @@
       // 
       this.lblID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
       this.lblID.AutoSize = true;
-      this.lblID.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblID.ForeColor = System.Drawing.Color.White;
       this.lblID.Location = new System.Drawing.Point(79, 572);
       this.lblID.Name = "lblID";
-      this.lblID.Size = new System.Drawing.Size(19, 16);
+      this.lblID.Size = new System.Drawing.Size(16, 13);
       this.lblID.TabIndex = 20;
       this.lblID.Text = "Id";
       this.lblID.Visible = false;
@@ -154,11 +154,11 @@
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label1.ForeColor = System.Drawing.Color.White;
       this.label1.Location = new System.Drawing.Point(69, 35);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(97, 21);
+      this.label1.Size = new System.Drawing.Size(99, 20);
       this.label1.TabIndex = 18;
       this.label1.Text = "Practica 04";
       // 
@@ -166,11 +166,11 @@
       // 
       this.lblcorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
       this.lblcorreo.AutoSize = true;
-      this.lblcorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblcorreo.ForeColor = System.Drawing.Color.White;
       this.lblcorreo.Location = new System.Drawing.Point(79, 622);
       this.lblcorreo.Name = "lblcorreo";
-      this.lblcorreo.Size = new System.Drawing.Size(44, 16);
+      this.lblcorreo.Size = new System.Drawing.Size(38, 13);
       this.lblcorreo.TabIndex = 17;
       this.lblcorreo.Text = "Correo";
       // 
@@ -178,11 +178,11 @@
       // 
       this.lbluser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
       this.lbluser.AutoSize = true;
-      this.lbluser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lbluser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lbluser.ForeColor = System.Drawing.Color.White;
       this.lbluser.Location = new System.Drawing.Point(79, 604);
       this.lbluser.Name = "lbluser";
-      this.lbluser.Size = new System.Drawing.Size(47, 16);
+      this.lbluser.Size = new System.Drawing.Size(43, 13);
       this.lbluser.TabIndex = 16;
       this.lbluser.Text = "Usuario";
       // 
@@ -202,11 +202,11 @@
       // 
       this.lblusuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
       this.lblusuario.AutoSize = true;
-      this.lblusuario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblusuario.ForeColor = System.Drawing.Color.White;
       this.lblusuario.Location = new System.Drawing.Point(79, 587);
       this.lblusuario.Name = "lblusuario";
-      this.lblusuario.Size = new System.Drawing.Size(42, 16);
+      this.lblusuario.Size = new System.Drawing.Size(35, 13);
       this.lblusuario.TabIndex = 14;
       this.lblusuario.Text = "Cargo";
       // 
@@ -215,7 +215,7 @@
       this.btnActivos.FlatAppearance.BorderSize = 0;
       this.btnActivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
       this.btnActivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.btnActivos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btnActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnActivos.ForeColor = System.Drawing.Color.White;
       this.btnActivos.Image = ((System.Drawing.Image)(resources.GetObject("btnActivos.Image")));
       this.btnActivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,7 +336,7 @@
       // label2
       // 
       this.label2.BackColor = System.Drawing.Color.Transparent;
-      this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
       this.label2.Location = new System.Drawing.Point(486, 424);
       this.label2.Name = "label2";
@@ -348,7 +348,7 @@
       // lblFecha
       // 
       this.lblFecha.BackColor = System.Drawing.Color.Transparent;
-      this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
       this.lblFecha.Location = new System.Drawing.Point(486, 529);
       this.lblFecha.Name = "lblFecha";
@@ -360,7 +360,7 @@
       // lblhora
       // 
       this.lblhora.BackColor = System.Drawing.Color.Transparent;
-      this.lblhora.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
       this.lblhora.Location = new System.Drawing.Point(486, 453);
       this.lblhora.Name = "lblhora";
