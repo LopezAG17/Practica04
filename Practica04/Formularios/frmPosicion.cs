@@ -65,7 +65,8 @@ namespace Practica04
           {
             MessageBox.Show("Solo números", "MSJ",
             MessageBoxButtons.OK,
-            MessageBoxIcon.Exclamation);
+            MessageBoxIcon.Exclamation
+            );
             e.Handled = true;
             return;
           }
