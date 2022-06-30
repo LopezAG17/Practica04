@@ -149,7 +149,6 @@ namespace Practica04
     }
 
 
-
     // ------------------------------------------------------------------
     // Eventos TextBox Fabrica a la que pertenece el departamento
     // ------------------------------------------------------------------
@@ -194,7 +193,7 @@ namespace Practica04
     // ------------------------------------------------------------------
     private void btnLimpiar_Click(object sender, EventArgs e)
     {
-      LimpiarEsteFormulario();  // viaja hasta la funcion LimpiarEsteFormulario() y ejecuta su contenido
+      Limpiar.Posicion();  // viaja hasta la funcion LimpiarEsteFormulario() y ejecuta su contenido
       txtPosicion.Focus();      // mueve el cursor al textBox indicado
     }
 
@@ -269,7 +268,6 @@ namespace Practica04
     {
       SqlConnection cnGuardar = new SqlConnection(cnn.db);
       cnGuardar.Open();   // aqui abre la base de datos
-
       // script sql para insertar data dentro de la tabla POSICIONES por medio de parametros de entrada
       string stQuery = "INSERT INTO POSICIONES (IDPOSICION, NOMBREDEPOSICION, FABRICA, DEPARTAMENTO ) VALUES (@A0, @A1, @A2, @A3 );";
       SqlCommand miqueri = new SqlCommand(stQuery, cnGuardar); // crea el comando para ejecutar el script de sql
@@ -316,18 +314,7 @@ namespace Practica04
       cnxn.Close();
     }
 
-    private void LimpiarEsteFormulario()
-    {
-      // -----------------------------
-      // Limpia los textBox and Label
-      // -----------------------------
-      txtDepartamento.Clear();
-      txtFabrica.Clear();
-      txtNombrePosicion.Clear();
-      txtPosicion.Clear();
-      lblDepartamento.Text = "";
-      lblFabricaNombre.Text = "";
-    }
+
 
     private void btnConsulta_Click(object sender, EventArgs e)
     {
