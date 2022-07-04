@@ -24,20 +24,39 @@ namespace Practica04
 
     private void btnLimpiar_Click(object sender, EventArgs e)
     {
+      Limpiar.FormularioDep();
       txtDepartamento.Focus();
     }
 
     private void btnGuardar_Click(object sender, EventArgs e)
     {
-      SQl.Db.cnx.Open();
-
+      btnLimpiar.PerformClick();
+      SQl.InsertDepartamento();
 
     }
 
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
     {
-      frmConsultaDep consultaDep = new frmConsultaDep();
-      consultaDep.Show();
+    }
+
+    private void txtDepartamento_Leave(object sender, EventArgs e)
+    {
+      if (txtDepartamento.Text.Trim() != string.Empty)
+      {
+        SQl.SelectDepartamento();
+      }
+      SQl.SelectDepartamento();
+
+    }
+
+    private void btnSalir_Click(object sender, EventArgs e)
+    {
+      this.Close();
+    }
+
+    private void bntBorrar_Click(object sender, EventArgs e)
+    {
+      SQl.DeleteDepartamento();
 
     }
   }

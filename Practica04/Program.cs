@@ -20,7 +20,7 @@ namespace Practica04
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDepartamento());   // aqui invoca el formulario a correr
+            Application.Run(new frmPosicion());   // aqui invoca el formulario a correr
         }
     }
 }

@@ -28,213 +28,216 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.btnConsulta = new System.Windows.Forms.Button();
-      this.label5 = new System.Windows.Forms.Label();
-      this.lblDepartamento = new System.Windows.Forms.Label();
-      this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
-      this.txtDepartamento = new System.Windows.Forms.TextBox();
-      this.lblTxNmDep = new System.Windows.Forms.Label();
-      this.lblTxIDDep = new System.Windows.Forms.Label();
-      this.btnSalir = new System.Windows.Forms.Button();
-      this.bntBorrar = new System.Windows.Forms.Button();
-      this.btnLimpiar = new System.Windows.Forms.Button();
-      this.btnGuardar = new System.Windows.Forms.Button();
-      this.btnConsultaFabrica = new System.Windows.Forms.Button();
-      this.lblFabrica = new System.Windows.Forms.Label();
-      this.txtFabrica = new System.Windows.Forms.TextBox();
-      this.label4 = new System.Windows.Forms.Label();
-      this.SuspendLayout();
+      btnConsulta = new System.Windows.Forms.Button();
+      label5 = new System.Windows.Forms.Label();
+      lblFabricaNombre = new System.Windows.Forms.Label();
+      txtNombreDepartamento = new System.Windows.Forms.TextBox();
+      txtDepartamento = new System.Windows.Forms.TextBox();
+      lblTxNmDep = new System.Windows.Forms.Label();
+      lblTxIDDep = new System.Windows.Forms.Label();
+      btnSalir = new System.Windows.Forms.Button();
+      bntBorrar = new System.Windows.Forms.Button();
+      btnLimpiar = new System.Windows.Forms.Button();
+      btnGuardar = new System.Windows.Forms.Button();
+      btnConsultaFabrica = new System.Windows.Forms.Button();
+      lblFabrica = new System.Windows.Forms.Label();
+      txtFabrica = new System.Windows.Forms.TextBox();
+      label4 = new System.Windows.Forms.Label();
+      SuspendLayout();
       // 
       // btnConsulta
       // 
-      this.btnConsulta.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      this.btnConsulta.Location = new System.Drawing.Point(253, 76);
-      this.btnConsulta.Name = "btnConsulta";
-      this.btnConsulta.Size = new System.Drawing.Size(27, 20);
-      this.btnConsulta.TabIndex = 26;
-      this.btnConsulta.Text = "...";
-      this.btnConsulta.UseVisualStyleBackColor = false;
+      btnConsulta.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnConsulta.Location = new System.Drawing.Point(253, 76);
+      btnConsulta.Name = "btnConsulta";
+      btnConsulta.Size = new System.Drawing.Size(27, 20);
+      btnConsulta.TabIndex = 26;
+      btnConsulta.Text = "...";
+      btnConsulta.UseVisualStyleBackColor = false;
       // 
       // label5
       // 
-      this.label5.BackColor = System.Drawing.Color.CornflowerBlue;
-      this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label5.ForeColor = System.Drawing.Color.White;
-      this.label5.Location = new System.Drawing.Point(0, -1);
-      this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(562, 49);
-      this.label5.TabIndex = 25;
-      this.label5.Text = " Maestro de Cargos y/o Departamentos";
-      this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      label5.BackColor = System.Drawing.Color.CornflowerBlue;
+      label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      label5.ForeColor = System.Drawing.Color.White;
+      label5.Location = new System.Drawing.Point(0, -1);
+      label5.Name = "label5";
+      label5.Size = new System.Drawing.Size(562, 49);
+      label5.TabIndex = 25;
+      label5.Text = " Maestro de  Departamentos";
+      label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
-      // lblDepartamento
+      // lblFabricaNombre
       // 
-      this.lblDepartamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.lblDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.lblDepartamento.Location = new System.Drawing.Point(286, 75);
-      this.lblDepartamento.Name = "lblDepartamento";
-      this.lblDepartamento.Size = new System.Drawing.Size(262, 20);
-      this.lblDepartamento.TabIndex = 24;
+      lblFabricaNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      lblFabricaNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      lblFabricaNombre.Location = new System.Drawing.Point(286, 75);
+      lblFabricaNombre.Name = "lblFabricaNombre";
+      lblFabricaNombre.Size = new System.Drawing.Size(262, 20);
+      lblFabricaNombre.TabIndex = 24;
       // 
       // txtNombreDepartamento
       // 
-      this.txtNombreDepartamento.Location = new System.Drawing.Point(188, 102);
-      this.txtNombreDepartamento.Name = "txtNombreDepartamento";
-      this.txtNombreDepartamento.Size = new System.Drawing.Size(360, 20);
-      this.txtNombreDepartamento.TabIndex = 18;
+      txtNombreDepartamento.Location = new System.Drawing.Point(188, 102);
+      txtNombreDepartamento.Name = "txtNombreDepartamento";
+      txtNombreDepartamento.Size = new System.Drawing.Size(360, 20);
+      txtNombreDepartamento.TabIndex = 18;
       // 
       // txtDepartamento
       // 
-      this.txtDepartamento.Location = new System.Drawing.Point(188, 76);
-      this.txtDepartamento.Name = "txtDepartamento";
-      this.txtDepartamento.Size = new System.Drawing.Size(65, 20);
-      this.txtDepartamento.TabIndex = 17;
+      txtDepartamento.Location = new System.Drawing.Point(188, 76);
+      txtDepartamento.Name = "txtDepartamento";
+      txtDepartamento.Size = new System.Drawing.Size(65, 20);
+      txtDepartamento.TabIndex = 17;
+      txtDepartamento.Leave += new System.EventHandler(txtDepartamento_Leave);
       // 
       // lblTxNmDep
       // 
-      this.lblTxNmDep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.lblTxNmDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.lblTxNmDep.Location = new System.Drawing.Point(13, 102);
-      this.lblTxNmDep.Name = "lblTxNmDep";
-      this.lblTxNmDep.Size = new System.Drawing.Size(169, 20);
-      this.lblTxNmDep.TabIndex = 22;
-      this.lblTxNmDep.Text = "Nombre del Departamento";
+      lblTxNmDep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      lblTxNmDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      lblTxNmDep.Location = new System.Drawing.Point(13, 102);
+      lblTxNmDep.Name = "lblTxNmDep";
+      lblTxNmDep.Size = new System.Drawing.Size(169, 20);
+      lblTxNmDep.TabIndex = 22;
+      lblTxNmDep.Text = "Nombre del Departamento";
       // 
       // lblTxIDDep
       // 
-      this.lblTxIDDep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.lblTxIDDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.lblTxIDDep.Location = new System.Drawing.Point(13, 76);
-      this.lblTxIDDep.Name = "lblTxIDDep";
-      this.lblTxIDDep.Size = new System.Drawing.Size(169, 20);
-      this.lblTxIDDep.TabIndex = 21;
-      this.lblTxIDDep.Text = "ID Derpartamento";
+      lblTxIDDep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      lblTxIDDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      lblTxIDDep.Location = new System.Drawing.Point(13, 76);
+      lblTxIDDep.Name = "lblTxIDDep";
+      lblTxIDDep.Size = new System.Drawing.Size(169, 20);
+      lblTxIDDep.TabIndex = 21;
+      lblTxIDDep.Text = "ID Derpartamento";
       // 
       // btnSalir
       // 
-      this.btnSalir.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      this.btnSalir.Location = new System.Drawing.Point(447, 166);
-      this.btnSalir.Name = "btnSalir";
-      this.btnSalir.Size = new System.Drawing.Size(101, 34);
-      this.btnSalir.TabIndex = 30;
-      this.btnSalir.Text = "Salir";
-      this.btnSalir.UseVisualStyleBackColor = false;
+      btnSalir.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnSalir.Location = new System.Drawing.Point(447, 166);
+      btnSalir.Name = "btnSalir";
+      btnSalir.Size = new System.Drawing.Size(101, 34);
+      btnSalir.TabIndex = 30;
+      btnSalir.Text = "Salir";
+      btnSalir.UseVisualStyleBackColor = false;
+      btnSalir.Click += new System.EventHandler(btnSalir_Click);
       // 
       // bntBorrar
       // 
-      this.bntBorrar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      this.bntBorrar.Location = new System.Drawing.Point(233, 166);
-      this.bntBorrar.Name = "bntBorrar";
-      this.bntBorrar.Size = new System.Drawing.Size(101, 34);
-      this.bntBorrar.TabIndex = 29;
-      this.bntBorrar.Text = "Borrar";
-      this.bntBorrar.UseVisualStyleBackColor = false;
+      bntBorrar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      bntBorrar.Location = new System.Drawing.Point(233, 166);
+      bntBorrar.Name = "bntBorrar";
+      bntBorrar.Size = new System.Drawing.Size(101, 34);
+      bntBorrar.TabIndex = 29;
+      bntBorrar.Text = "Borrar";
+      bntBorrar.UseVisualStyleBackColor = false;
+      bntBorrar.Click += new System.EventHandler(bntBorrar_Click);
       // 
       // btnLimpiar
       // 
-      this.btnLimpiar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      this.btnLimpiar.Location = new System.Drawing.Point(126, 166);
-      this.btnLimpiar.Name = "btnLimpiar";
-      this.btnLimpiar.Size = new System.Drawing.Size(101, 34);
-      this.btnLimpiar.TabIndex = 28;
-      this.btnLimpiar.Text = "Limpiar";
-      this.btnLimpiar.UseVisualStyleBackColor = false;
-      this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+      btnLimpiar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnLimpiar.Location = new System.Drawing.Point(126, 166);
+      btnLimpiar.Name = "btnLimpiar";
+      btnLimpiar.Size = new System.Drawing.Size(101, 34);
+      btnLimpiar.TabIndex = 28;
+      btnLimpiar.Text = "Limpiar";
+      btnLimpiar.UseVisualStyleBackColor = false;
+      btnLimpiar.Click += new System.EventHandler(btnLimpiar_Click);
       // 
       // btnGuardar
       // 
-      this.btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      this.btnGuardar.Location = new System.Drawing.Point(19, 166);
-      this.btnGuardar.Name = "btnGuardar";
-      this.btnGuardar.Size = new System.Drawing.Size(101, 34);
-      this.btnGuardar.TabIndex = 27;
-      this.btnGuardar.Text = "Guardar";
-      this.btnGuardar.UseVisualStyleBackColor = false;
-      this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+      btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnGuardar.Location = new System.Drawing.Point(19, 166);
+      btnGuardar.Name = "btnGuardar";
+      btnGuardar.Size = new System.Drawing.Size(101, 34);
+      btnGuardar.TabIndex = 27;
+      btnGuardar.Text = "Guardar";
+      btnGuardar.UseVisualStyleBackColor = false;
+      btnGuardar.Click += new System.EventHandler(btnGuardar_Click);
       // 
       // btnConsultaFabrica
       // 
-      this.btnConsultaFabrica.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      this.btnConsultaFabrica.Location = new System.Drawing.Point(253, 127);
-      this.btnConsultaFabrica.Name = "btnConsultaFabrica";
-      this.btnConsultaFabrica.Size = new System.Drawing.Size(27, 22);
-      this.btnConsultaFabrica.TabIndex = 32;
-      this.btnConsultaFabrica.Text = "...";
-      this.btnConsultaFabrica.UseVisualStyleBackColor = false;
+      btnConsultaFabrica.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnConsultaFabrica.Location = new System.Drawing.Point(253, 127);
+      btnConsultaFabrica.Name = "btnConsultaFabrica";
+      btnConsultaFabrica.Size = new System.Drawing.Size(27, 22);
+      btnConsultaFabrica.TabIndex = 32;
+      btnConsultaFabrica.Text = "...";
+      btnConsultaFabrica.UseVisualStyleBackColor = false;
       // 
       // lblFabrica
       // 
-      this.lblFabrica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.lblFabrica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.lblFabrica.Location = new System.Drawing.Point(286, 128);
-      this.lblFabrica.Name = "lblFabrica";
-      this.lblFabrica.Size = new System.Drawing.Size(262, 20);
-      this.lblFabrica.TabIndex = 34;
+      lblFabrica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      lblFabrica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      lblFabrica.Location = new System.Drawing.Point(286, 128);
+      lblFabrica.Name = "lblFabrica";
+      lblFabrica.Size = new System.Drawing.Size(262, 20);
+      lblFabrica.TabIndex = 34;
       // 
       // txtFabrica
       // 
-      this.txtFabrica.Location = new System.Drawing.Point(188, 128);
-      this.txtFabrica.Name = "txtFabrica";
-      this.txtFabrica.Size = new System.Drawing.Size(65, 20);
-      this.txtFabrica.TabIndex = 31;
+      txtFabrica.Location = new System.Drawing.Point(188, 128);
+      txtFabrica.Name = "txtFabrica";
+      txtFabrica.Size = new System.Drawing.Size(65, 20);
+      txtFabrica.TabIndex = 31;
       // 
       // label4
       // 
-      this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.label4.Location = new System.Drawing.Point(13, 128);
-      this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(169, 20);
-      this.label4.TabIndex = 33;
-      this.label4.Text = "ID Fabrica";
+      label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      label4.Location = new System.Drawing.Point(13, 128);
+      label4.Name = "label4";
+      label4.Size = new System.Drawing.Size(169, 20);
+      label4.TabIndex = 33;
+      label4.Text = "ID Fabrica";
       // 
       // frmDepartamento
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackColor = System.Drawing.SystemColors.ButtonFace;
-      this.ClientSize = new System.Drawing.Size(560, 235);
-      this.Controls.Add(this.btnConsultaFabrica);
-      this.Controls.Add(this.lblFabrica);
-      this.Controls.Add(this.txtFabrica);
-      this.Controls.Add(this.label4);
-      this.Controls.Add(this.btnSalir);
-      this.Controls.Add(this.bntBorrar);
-      this.Controls.Add(this.btnLimpiar);
-      this.Controls.Add(this.btnGuardar);
-      this.Controls.Add(this.btnConsulta);
-      this.Controls.Add(this.label5);
-      this.Controls.Add(this.lblDepartamento);
-      this.Controls.Add(this.txtNombreDepartamento);
-      this.Controls.Add(this.txtDepartamento);
-      this.Controls.Add(this.lblTxNmDep);
-      this.Controls.Add(this.lblTxIDDep);
-      this.Name = "frmDepartamento";
-      this.Text = "frmDepartamento";
-      this.Load += new System.EventHandler(this.frmDepartamento_Load);
-      this.ResumeLayout(false);
-      this.PerformLayout();
+      AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      BackColor = System.Drawing.SystemColors.ButtonFace;
+      ClientSize = new System.Drawing.Size(560, 235);
+      Controls.Add(btnConsultaFabrica);
+      Controls.Add(lblFabrica);
+      Controls.Add(txtFabrica);
+      Controls.Add(label4);
+      Controls.Add(btnSalir);
+      Controls.Add(bntBorrar);
+      Controls.Add(btnLimpiar);
+      Controls.Add(btnGuardar);
+      Controls.Add(btnConsulta);
+      Controls.Add(label5);
+      Controls.Add(lblFabricaNombre);
+      Controls.Add(txtNombreDepartamento);
+      Controls.Add(txtDepartamento);
+      Controls.Add(lblTxNmDep);
+      Controls.Add(lblTxIDDep);
+      Name = "frmDepartamento";
+      Text = "frmDepartamento";
+      Load += new System.EventHandler(frmDepartamento_Load);
+      ResumeLayout(false);
+      PerformLayout();
 
     }
 
     #endregion
 
-    private System.Windows.Forms.Button btnConsulta;
-    private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.Label lblDepartamento;
-    private System.Windows.Forms.TextBox txtNombreDepartamento;
-    private System.Windows.Forms.TextBox txtDepartamento;
-    private System.Windows.Forms.Label lblTxNmDep;
-    private System.Windows.Forms.Label lblTxIDDep;
-    private System.Windows.Forms.Button btnSalir;
-    private System.Windows.Forms.Button bntBorrar;
-    private System.Windows.Forms.Button btnLimpiar;
-    private System.Windows.Forms.Button btnGuardar;
-    private System.Windows.Forms.Button btnConsultaFabrica;
-    private System.Windows.Forms.Label lblFabrica;
-    private System.Windows.Forms.TextBox txtFabrica;
-    private System.Windows.Forms.Label label4;
+    public static System.Windows.Forms.Button btnConsulta;
+    public static System.Windows.Forms.Label label5;
+    public static System.Windows.Forms.Label lblFabricaNombre;
+    public static System.Windows.Forms.TextBox txtNombreDepartamento;
+    public static System.Windows.Forms.TextBox txtDepartamento;
+    public static System.Windows.Forms.Label lblTxNmDep;
+    public static System.Windows.Forms.Label lblTxIDDep;
+    public static System.Windows.Forms.Button btnSalir;
+    public static System.Windows.Forms.Button bntBorrar;
+    public static System.Windows.Forms.Button btnLimpiar;
+    public static System.Windows.Forms.Button btnGuardar;
+    public static System.Windows.Forms.Button btnConsultaFabrica;
+    public static System.Windows.Forms.Label lblFabrica;
+    public static System.Windows.Forms.TextBox txtFabrica;
+    public static System.Windows.Forms.Label label4;
   }
 }

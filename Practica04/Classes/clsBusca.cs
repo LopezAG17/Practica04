@@ -100,7 +100,25 @@ namespace Practica04
       cnxn.Close();
       return null;
     }
+    public static string CargosDepartamentos(string NumberDepartamento)
+    {
+      SqlConnection cnxn = new SqlConnection(cnn.db);
+      cnxn.Open();
+      SqlCommand cmmnd = new SqlCommand("SELECT IDdepartamento, NombreDepartamento,IDfabrica " +
+                                        "  FROM DEPARTAMENTOS " +
+                                        " WHERE IDdepartamento = @PV", cnxn);
+      cmmnd.Parameters.AddWithValue("@PV", NumberDepartamento);
+      SqlDataReader rdr = cmmnd.ExecuteReader();
 
+      if (rdr.Read())
+      {
+        return Convert.ToString(rdr["NOMBREDEPARTAMENTO"]);
+      }
+
+      cmmnd.Dispose();
+      cnxn.Close();
+      return null;
+    }
     public static string Departamento(string NumberPosicion)
     {
       SqlConnection cnxn = new SqlConnection(cnn.db);
@@ -133,7 +151,7 @@ namespace Practica04
 
       if (rdr.Read())
       {
-        return Convert.ToString(rdr["nombredefabrica"]);
+        return Convert.ToString(rdr["NombreDeFabrica"]);
       }
 
       cmmnd.Dispose();

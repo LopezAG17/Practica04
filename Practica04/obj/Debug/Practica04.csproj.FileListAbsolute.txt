@@ -34,5 +34,5 @@ D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Pr
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.csproj.CoreCompileInputs.cache
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica01.exe
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica01.pdb
-D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmConsultaDep.resources
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmDepartamento.resources
+D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmFabrica.resources

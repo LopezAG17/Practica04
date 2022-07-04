@@ -65,8 +65,7 @@ namespace Practica04
           {
             MessageBox.Show("Solo números", "MSJ",
             MessageBoxButtons.OK,
-            MessageBoxIcon.Exclamation
-            );
+            MessageBoxIcon.Exclamation);
             e.Handled = true;
             return;
           }
@@ -149,6 +148,7 @@ namespace Practica04
     }
 
 
+
     // ------------------------------------------------------------------
     // Eventos TextBox Fabrica a la que pertenece el departamento
     // ------------------------------------------------------------------
@@ -193,7 +193,7 @@ namespace Practica04
     // ------------------------------------------------------------------
     private void btnLimpiar_Click(object sender, EventArgs e)
     {
-      Limpiar.Posicion();  // viaja hasta la funcion LimpiarEsteFormulario() y ejecuta su contenido
+      Limpiar.FormularioPos();
       txtPosicion.Focus();      // mueve el cursor al textBox indicado
     }
 
@@ -246,72 +246,17 @@ namespace Practica04
     // ----------------------------------------------------------
     private void BorrarInformacion(string numPosicion)
     {
-      // ----------------------------------------------------------
-      // se crea la conexion hacia SQL
-      // cnn.db ... contiene el string conexion a la base de datos
-      // cnndel ... es el objeto creado que manipulara la conexion a la base de datos
-      // ----------------------------------------------------------
-      SqlConnection cnndel = new SqlConnection(cnn.db);
-      cnndel.Open();  // aqui abre la base de datos
-
-      // aqui se arma el script de sql y contiene un parametro @RG
-      string miQuery = "DELETE FROM POSICIONES WHERE IDPOSICION = @RG;";
-
-      SqlCommand queri = new SqlCommand(miQuery, cnndel);  // crea el comando para ejecutar el script de sql
-      queri.Parameters.AddWithValue("@RG", numPosicion);   // aqui se le envia la data contenida en numPosicion al parametro @RG
-      queri.ExecuteNonQuery();                             // ejecuta el query
-
-      cnndel.Close();                                      // cierra la conexion a la base de datos
+      SQl.DeletePosicion();
     }
 
     private void GuardarInformacion()
     {
-      SqlConnection cnGuardar = new SqlConnection(cnn.db);
-      cnGuardar.Open();   // aqui abre la base de datos
-      // script sql para insertar data dentro de la tabla POSICIONES por medio de parametros de entrada
-      string stQuery = "INSERT INTO POSICIONES (IDPOSICION, NOMBREDEPOSICION, FABRICA, DEPARTAMENTO ) VALUES (@A0, @A1, @A2, @A3 );";
-      SqlCommand miqueri = new SqlCommand(stQuery, cnGuardar); // crea el comando para ejecutar el script de sql
-
-      miqueri.Parameters.AddWithValue("@A0", Convert.ToString(txtPosicion.Text));
-      miqueri.Parameters.AddWithValue("@A1", Convert.ToString(txtNombrePosicion.Text));
-      miqueri.Parameters.AddWithValue("@A2", Convert.ToString(txtDepartamento.Text));
-      miqueri.Parameters.AddWithValue("@A3", Convert.ToString(txtFabrica.Text));
-
-      miqueri.ExecuteNonQuery(); // ejecuta el query
-      cnGuardar.Close();         // cierra la conexion a la base de datos
+      SQl.InsertPosicion();
     }
 
     private void buscar_datos()
     {
-      SqlConnection cnxn = new SqlConnection(cnn.db);
-      cnxn.Open();
-
-      SqlCommand cmmnd = new SqlCommand("    SELECT a.NombreDePosicion,  " +
-                                        "           a.Fabrica,  " +
-                                        "           a.Departamento,  " +
-                                        "           B.NombreDefabrica,   " +
-                                        "           C.NombreDepartamento  " +
-                                        "      FROM POSICIONES   A " +
-                                        " LEFT join FABRICA      B on a.Fabrica      = b.IDfabrica " +
-                                        " LEFT join DEPARTAMENTO C on A.Departamento = C.IDdepartamento " +
-                                        "WHERE IDPOSICION =@PV", cnxn);
-
-      cmmnd.Parameters.AddWithValue("@PV", txtPosicion.Text);
-
-      SqlDataReader recordn = cmmnd.ExecuteReader();
-
-      if (recordn.Read())
-      {
-        txtNombrePosicion.Text = Convert.ToString(recordn["NOMBREDEPOSICION"]);
-        txtDepartamento.Text = Convert.ToString(recordn["DEPARTAMENTO"]);
-        txtFabrica.Text = Convert.ToString(recordn["FABRICA"]);
-
-        lblDepartamento.Text = Convert.ToString(recordn["NombreDefabrica"]);
-        lblFabricaNombre.Text = Convert.ToString(recordn["NombreDepartamento"]);
-      }
-
-      cmmnd.Dispose();
-      cnxn.Close();
+      SQl.SelectPosicion();
     }
 
 

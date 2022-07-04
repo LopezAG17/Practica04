@@ -8,13 +8,50 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practica04.Formularios
+namespace Practica04
 {
-    public partial class frmFabrica : Form
+  public partial class frmFabrica : Form
+  {
+    public frmFabrica()
     {
-        public frmFabrica()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+
+    private void frmFabrica_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void txtFabrica_Leave(object sender, EventArgs e)
+    {
+      if (txtFabrica.Text.Trim() != string.Empty)
+      {
+        SQl.SelectFabrica();
+      }
+      SQl.SelectFabrica();
+
+    }
+    private void btnLimpiar_Click_1(object sender, EventArgs e)
+    {
+      Limpiar.FormularioFab();
+      txtFabrica.Focus();
+    }
+    private void btnGuardar_Click(object sender, EventArgs e)
+    {
+      btnLimpiar.PerformClick();
+      SQl.InsertFabrica();
+
+    }
+
+    private void bntBorrar_Click(object sender, EventArgs e)
+    {
+      SQl.DeleteFabrica();
+
+    }
+
+    private void btnSalir_Click(object sender, EventArgs e)
+    {
+      this.Close();
+    }
+  }
 }

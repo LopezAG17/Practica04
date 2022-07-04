@@ -47,18 +47,19 @@
   <ItemGroup>
     <Compile Include="Classes\clsBusca.cs" />
     <Compile Include="Classes\ConvertImage.cs" />
+    <Compile Include="Classes\Eventos.cs" />
     <Compile Include="Classes\SQl.cs" />
-    <Compile Include="Formularios\frmConsultaDep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmConsultaDep.Designer.cs">
-      <DependentUpon>frmConsultaDep.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmDepartamento.Designer.cs">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFabrica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFabrica.Designer.cs">
+      <DependentUpon>frmFabrica.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmPosicion.cs">
       <SubType>Form</SubType>
@@ -80,11 +81,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\frmConsultaDep.resx">
-      <DependentUpon>frmConsultaDep.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFabrica.resx">
+      <DependentUpon>frmFabrica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPosicion.resx">
       <DependentUpon>frmPosicion.cs</DependentUpon>
