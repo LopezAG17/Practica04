@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Windows.Forms;
 namespace Practica04
 {
   public static class Limpiar
@@ -33,7 +28,13 @@ namespace Practica04
       frmFabrica.txtFabrica.Clear();
       frmFabrica.txtNombreFabrica.Clear();
       frmFabrica.lblLocalidad.Text = "";
-
     }
   }
+  public class Diseño
+  {
+    public void DGV_Posiciones()
+    {
+    }
+  }
+  
 }

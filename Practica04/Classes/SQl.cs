@@ -8,16 +8,17 @@ using System.Windows.Forms;
 
 namespace Practica04
 {
+  public static class Db
+  {
+    public static string Stringcnx = "Server=localhost;Database=DBpractica;Trusted_Connection=True;";
+    public static SqlConnection cnx = new SqlConnection(Stringcnx);
+  }
   public static class SQl
   {
-    public static class Db
-    {
-      public static string Stringcnx = "Server=localhost;Database=DBpractica;Trusted_Connection=True;";
-      public static SqlConnection cnx = new SqlConnection(Stringcnx);
-    }
+
     public static void SelectPosicion()
     {
-      SQl.Db.cnx.Open();
+      Db.cnx.Open();
       SqlCommand cmmnd = new SqlCommand("    SELECT a.NombreDePosicion,  " +
                                                   "           a.Fabrica,  " +
                                                   "           a.Departamento,  " +
@@ -26,7 +27,7 @@ namespace Practica04
                                                   "      FROM POSICIONES   A " +
                                                   " LEFT join FABRICA      B on a.Fabrica      = b.IDfabrica " +
                                                   " LEFT join DEPARTAMENTO C on A.Departamento = C.IDdepartamento " +
-                                                  "WHERE IDPOSICION =@PV", SQl.Db.cnx);
+                                                  "WHERE IDPOSICION =@PV", Db.cnx);
 
       cmmnd.Parameters.AddWithValue("@PV", frmPosicion.txtPosicion.Text);
       SqlDataReader recordn = cmmnd.ExecuteReader();
@@ -45,36 +46,36 @@ namespace Practica04
       }
 
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void DeletePosicion()
     {
-      SQl.Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("DELETE FROM POSICIONES WHERE IDPOSICION = @RG", SQl.Db.cnx);
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("DELETE FROM POSICIONES WHERE IDPOSICION = @RG", Db.cnx);
       cmmnd.Parameters.AddWithValue("@RG", frmPosicion.txtPosicion.Text);
       cmmnd.ExecuteNonQuery();
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void InsertPosicion()
     {
-      SQl.Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("INSERT INTO POSICIONES (NOMBREDEPOSICION, FABRICA, DEPARTAMENTO) VALUES (@NOMBREDEPOSICION, @FABRICA, @DEPARTAMENTO)", SQl.Db.cnx);
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("INSERT INTO POSICIONES (NOMBREDEPOSICION, FABRICA, DEPARTAMENTO) VALUES (@NOMBREDEPOSICION, @FABRICA, @DEPARTAMENTO)", Db.cnx);
       cmmnd.Parameters.AddWithValue("@A0", frmPosicion.txtPosicion.Text);
       cmmnd.Parameters.AddWithValue("@A1", frmPosicion.txtNombrePosicion.Text);
       cmmnd.Parameters.AddWithValue("@A2", frmPosicion.txtFabrica.Text);
       cmmnd.Parameters.AddWithValue("@A3", frmPosicion.txtDepartamento.Text);
       cmmnd.ExecuteNonQuery();
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void SelectDepartamento()
     {
-      SQl.Db.cnx.Open();
+      Db.cnx.Open();
       SqlCommand cmmnd = new SqlCommand("SELECT a.NombreDepartamento, a.IdFabrica, b.NombreDefabrica " +
                                         "From Departamento A LEFT JOIN Fabrica B ON a.IDfabrica = b.IDfabrica " +
                                         "WHERE a.IDdepartamento =@PV",
-                                        SQl.Db.cnx
+                                        Db.cnx
                                        );
 
       cmmnd.Parameters.AddWithValue("@PV", Convert.ToString(frmDepartamento.txtDepartamento.Text));
@@ -92,35 +93,35 @@ namespace Practica04
       }
 
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void DeleteDepartamento()
     {
-      SQl.Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("DELETE FROM DEPARTAMENTO WHERE IDdepartamento = @RG", SQl.Db.cnx);
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("DELETE FROM DEPARTAMENTO WHERE IDdepartamento = @RG", Db.cnx);
       cmmnd.Parameters.AddWithValue("@RG", frmDepartamento.txtDepartamento.Text);
       cmmnd.ExecuteNonQuery();
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void InsertDepartamento()
     {
-      SQl.Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("INSERT INTO DEPARTAMENTO (IDdepartamento, NombreDepartamento, IDfabrica) VALUES (@A0, @A1, @A2)", SQl.Db.cnx);
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("INSERT INTO DEPARTAMENTO (IDdepartamento, NombreDepartamento, IDfabrica) VALUES (@A0, @A1, @A2)", Db.cnx);
       cmmnd.Parameters.AddWithValue("@A0", frmDepartamento.txtDepartamento.Text);
       cmmnd.Parameters.AddWithValue("@A1", frmDepartamento.txtNombreDepartamento.Text);
       cmmnd.Parameters.AddWithValue("@A2", frmDepartamento.txtFabrica.Text);
       cmmnd.ExecuteNonQuery();
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void SelectFabrica()
     {
-      SQl.Db.cnx.Open();
+      Db.cnx.Open();
       SqlCommand cmmnd = new SqlCommand("SELECT b.NombreLocalidad, a.NombreDeFabrica, a.Localidad, a.IDfabrica " +
                                         "FROM Fabrica A Left Join Localidad B On  A.Localidad = B.IDLocalidad " +
                                         "WHERE a.IDfabrica =@PV",
-                                        SQl.Db.cnx
+                                        Db.cnx
                                        );
 
       cmmnd.Parameters.AddWithValue("@PV", Convert.ToString(frmFabrica.txtFabrica.Text));
@@ -136,27 +137,58 @@ namespace Practica04
         MessageBox.Show("No existe la fabrica");
       }
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void DeleteFabrica()
     {
-      SQl.Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("DELETE FROM FABRICA WHERE IDfabrica = @RG", SQl.Db.cnx);
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("DELETE FROM FABRICA WHERE IDfabrica = @RG", Db.cnx);
       cmmnd.Parameters.AddWithValue("@RG", frmFabrica.txtFabrica.Text);
       cmmnd.ExecuteNonQuery();
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
     public static void InsertFabrica()
     {
-      SQl.Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("INSERT INTO FABRICA (IDfabrica, NombreDeFabrica, Localidad) VALUES (@A0, @A1, @A2)", SQl.Db.cnx);
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("INSERT INTO FABRICA (IDfabrica, NombreDeFabrica, Localidad) VALUES (@A0, @A1, @A2)", Db.cnx);
       cmmnd.Parameters.AddWithValue("@A0", frmFabrica.txtFabrica.Text);
       cmmnd.Parameters.AddWithValue("@A1", frmFabrica.txtNombreFabrica.Text);
       cmmnd.Parameters.AddWithValue("@A2", frmFabrica.txtLocalidad.Text);
       cmmnd.ExecuteNonQuery();
       cmmnd.Dispose();
-      SQl.Db.cnx.Close();
+      Db.cnx.Close();
     }
+  }
+  public static class DGridView
+  {
+    public static void BuscarDepartamento()
+    {
+      Db.cnx.Open();
+      SqlCommand cmd = new SqlCommand("SELECT IDdeDepartamento, NombreDEpartamento " +
+                                      "FROM Departamento " +
+                                      "Where NombreDepartamento " +
+                                      "like '%" + frmConsultaDepartamento.txtBuscar + "%' " +
+                                      "Order by NombreDepartamento ASC", Db.cnx);
+    }
+    public static void BuscarPosicion()
+    {
+      Db.cnx.Open();
+      SqlCommand cmd = new SqlCommand("SELECT IDdePosicion, NombrePosicion " +
+                                      "FROM Posicion " +
+                                      "Where NombrePosicion " +
+                                      "like '%" + frmConsultaPosicion.txtBuscar + "%' " +
+                                      "Order by NombrePosicion ASC", Db.cnx);
+    }
+    public static void BuscarFabrica()
+    {
+      Db.cnx.Open();
+      SqlCommand cmd = new SqlCommand("SELECT IDdeFabrica, NombreFabrica " +
+                                      "FROM Fabrica " +
+                                      "Where NombreFabrica " +
+                                      "like '%" + frmConsultaFabrica.txtBuscar + "%' " +
+                                      "Order by NombreFabrica ASC", Db.cnx);
+    }
+
   }
 }
