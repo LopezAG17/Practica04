@@ -16,12 +16,10 @@ namespace Practica04
     {
       InitializeComponent();
     }
-
     private void frmFabrica_Load(object sender, EventArgs e)
     {
 
     }
-
     private void txtFabrica_Leave(object sender, EventArgs e)
     {
       if (txtFabrica.Text.Trim() != string.Empty)
@@ -29,7 +27,6 @@ namespace Practica04
         SQl.SelectFabrica();
       }
       SQl.SelectFabrica();
-
     }
     private void btnLimpiar_Click_1(object sender, EventArgs e)
     {
@@ -40,18 +37,25 @@ namespace Practica04
     {
       btnLimpiar.PerformClick();
       SQl.InsertFabrica();
-
     }
-
     private void bntBorrar_Click(object sender, EventArgs e)
     {
       SQl.DeleteFabrica();
 
     }
-
     private void btnSalir_Click(object sender, EventArgs e)
     {
       this.Close();
+    }
+    private void btnConsulta_Click(object sender, EventArgs e)
+    {
+      frmConsultaFabrica Consulta = new frmConsultaFabrica();
+      Consulta.Show();
+    }
+    private void btnConsultaFabrica_Click(object sender, EventArgs e)
+    {
+      frmConsultaFabrica ConsultaLocalidad = new frmConsultaFabrica();
+      ConsultaLocalidad.Show();
     }
   }
 }

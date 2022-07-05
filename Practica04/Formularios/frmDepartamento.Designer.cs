@@ -54,6 +54,7 @@
       btnConsulta.TabIndex = 26;
       btnConsulta.Text = "...";
       btnConsulta.UseVisualStyleBackColor = false;
+      btnConsulta.Click += new System.EventHandler(btnConsulta_Click);
       // 
       // label5
       // 
@@ -166,6 +167,7 @@
       btnConsultaFabrica.TabIndex = 32;
       btnConsultaFabrica.Text = "...";
       btnConsultaFabrica.UseVisualStyleBackColor = false;
+      btnConsultaFabrica.Click += new System.EventHandler(btnConsultaFabrica_Click_1);
       // 
       // lblFabrica
       // 

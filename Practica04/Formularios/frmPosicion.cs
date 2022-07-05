@@ -22,7 +22,6 @@ namespace Practica04
     string NombreDepartamento;
     string NombreFabrica;
     // -------------------------------------------------------
-
     public frmPosicion()
     {
       InitializeComponent();
@@ -32,7 +31,6 @@ namespace Practica04
       // -------------------------------------------------------
       this.StartPosition = FormStartPosition.CenterScreen;
     }
-
     private void frmPosicion_Load(object sender, EventArgs e)
     {
       // -------------------------------------------------------
@@ -40,8 +38,6 @@ namespace Practica04
       // -------------------------------------------------------
       this.Text = HMenu.cia + " Maestro de Cargos y/o Posiciones";
     }
-
-
     // ------------------------------------------------------------------
     // Eventos ID de la posición 
     // ------------------------------------------------------------------
@@ -51,7 +47,6 @@ namespace Practica04
       if ((int)e.KeyChar == (int)Keys.Enter)
       {
         e.Handled = true;
-
         // esta preguntando si el contenido del textbox es diferente de vacio
         if (txtPosicion.Text.Trim() != string.Empty)
         {
@@ -72,7 +67,6 @@ namespace Practica04
         }
       }
     }
-
     // el evento LEAVE se utiliza cuando el cursor sale del textBox
     private void txtPosicion_Leave(object sender, EventArgs e)
     {
@@ -90,8 +84,6 @@ namespace Practica04
         buscar_datos();
       }
     }
-
-
     // ------------------------------------------------------------------
     // Eventos TextBox Nombre de la posición el colaborador
     // ------------------------------------------------------------------
@@ -106,14 +98,10 @@ namespace Practica04
         }
       }
     }
-
     private void txtNombrePosicion_Leave(object sender, EventArgs e)
     {
       txtDepartamento.Focus();
     }
-
-
-
     // ------------------------------------------------------------------
     // Eventos TextBox Departamento al que pertenece el colaborador
     // ------------------------------------------------------------------
@@ -128,7 +116,6 @@ namespace Practica04
         }
       }
     }
-
     private void txtDepartamento_Leave(object sender, EventArgs e)
     {
       if (txtDepartamento.Text.Trim() != string.Empty)
@@ -139,16 +126,10 @@ namespace Practica04
         // NombreDepartamento...                     es el metodo dento de la clase
         // Convert.ToString(txtDepartamento.Text)... es el parametro enviado al metodo de la clase, convertido en un string
         // ----------------------------------------------------------------------
-
         lblDepartamento.Text = Busco.Departamento(Convert.ToString(txtDepartamento.Text)); // valor retornado por la clase es asignado al TextBox
-
-
         // lblDepartamento.Text = NombreDepartamento;   // asigna el valor contenido en la variable al textbox
       }
     }
-
-
-
     // ------------------------------------------------------------------
     // Eventos TextBox Fabrica a la que pertenece el departamento
     // ------------------------------------------------------------------
@@ -163,7 +144,6 @@ namespace Practica04
         }
       }
     }
-
     private void txtFabrica_Leave(object sender, EventArgs e)
     {
       if (txtFabrica.Text.Trim() != string.Empty)
@@ -172,9 +152,6 @@ namespace Practica04
         lblFabricaNombre.Text = NombreFabrica;
       }
     }
-
-
-
     // ------------------------------------------------------------------
     // Evento Boton Guardar
     // ------------------------------------------------------------------
@@ -187,7 +164,6 @@ namespace Practica04
       GuardarInformacion();                                   // Inserta la informacion en la tabla POSICIONES en la base de datos
       btnLimpiar.PerformClick();                              // invoca el boto limpiar (btnLimpiar) y ejecuta su contenido
     }
-
     // ------------------------------------------------------------------
     // Evento Boton Limpiar
     // ------------------------------------------------------------------
@@ -196,7 +172,6 @@ namespace Practica04
       Limpiar.FormularioPos();
       txtPosicion.Focus();      // mueve el cursor al textBox indicado
     }
-
     // ------------------------------------------------------------------
     // Evento Boton Borrar
     // ------------------------------------------------------------------
@@ -207,15 +182,9 @@ namespace Practica04
       // por la funcion BorrarInformacion.
       BorrarInformacion(Convert.ToString(txtPosicion.Text));
     }
-
     // ------------------------------------------------------------------
     // Evento Boton Consultar
     // ------------------------------------------------------------------
-    private void bntConsulta_Click(object sender, EventArgs e)
-    {
-
-    }
-
     // ------------------------------------------------------------------
     // Evento Boton Salir
     // ------------------------------------------------------------------
@@ -223,24 +192,22 @@ namespace Practica04
     {
       this.Close(); // Cierra este formulario
     }
-
     // ------------------------------------------------------------------
     // Evento Boton Cnsulta Departamento
     // ------------------------------------------------------------------
     private void btnConsultaDepto_Click(object sender, EventArgs e)
     {
-
+      frmConsultaDepartamento consulta = new frmConsultaDepartamento();
+      consulta.ShowDialog();
     }
-
     // ------------------------------------------------------------------
     // Evento Boton Consulta Fabrica
     // ------------------------------------------------------------------
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
     {
-
+      frmConsultaFabrica consulta = new frmConsultaFabrica();
+      consulta.ShowDialog();
     }
-
-
     // ----------------------------------------------------------
     // esta funcion recibe un parametro de entrada de tipo string
     // ----------------------------------------------------------
@@ -248,32 +215,18 @@ namespace Practica04
     {
       SQl.DeletePosicion();
     }
-
     private void GuardarInformacion()
     {
       SQl.InsertPosicion();
     }
-
     private void buscar_datos()
     {
       SQl.SelectPosicion();
     }
-
-
-
     private void btnConsulta_Click(object sender, EventArgs e)
     {
-      //txtPosicion.Focus();
-
-      //frmVENAREA frmVENAREA = new frmVENAREA();
-      //frmVENAREA.txtBusqueda.Text = Convert.ToString(1);
-      //DialogResult res = frmVENAREA.ShowDialog();
-
-      //if (res == DialogResult.OK)
-      //{
-      //    //txtAnuncia.Text = frmVENAREA.varf1;
-      //    //lblAnuncia.Text = frmVENAREA.varf2;
-      //}
+      frmConsultaPosicion ConsultaPosicion = new frmConsultaPosicion();
+      ConsultaPosicion.ShowDialog();
     }
   }
 }

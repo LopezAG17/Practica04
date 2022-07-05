@@ -53,6 +53,7 @@
       btnConsultaFabrica.TabIndex = 47;
       btnConsultaFabrica.Text = "...";
       btnConsultaFabrica.UseVisualStyleBackColor = false;
+      btnConsultaFabrica.Click += new System.EventHandler(btnConsultaFabrica_Click);
       // 
       // lblLocalidad
       // 
@@ -133,6 +134,7 @@
       btnConsulta.TabIndex = 41;
       btnConsulta.Text = "...";
       btnConsulta.UseVisualStyleBackColor = false;
+      btnConsulta.Click += new System.EventHandler(btnConsulta_Click);
       // 
       // label5
       // 
