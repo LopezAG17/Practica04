@@ -9,8 +9,6 @@ namespace Practica04
     // aqui declaramos las variable que utilizamos dentro del
     // formulario 
     // -------------------------------------------------------
-    string NombreCargo;
-    string NombreDepartamento;
     string NombreFabrica;
     // -------------------------------------------------------
     public frmPosicion()
@@ -218,6 +216,18 @@ namespace Practica04
     {
       frmConsultaPosicion ConsultaPosicion = new frmConsultaPosicion();
       ConsultaPosicion.ShowDialog();
+    }
+    private void btnDepatamento_Click(object sender, EventArgs e)
+    {
+      frmDepartamento MaestroDepartamento = new frmDepartamento();
+      MaestroDepartamento.ShowDialog();
+      this.Close();
+    }
+    private void btnFabrica_Click(object sender, EventArgs e)
+    {
+      frmFabrica MaestroFabrica = new frmFabrica();
+      MaestroFabrica.ShowDialog();
+      this.Close();
     }
   }
 }

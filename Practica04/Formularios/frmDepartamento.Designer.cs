@@ -43,6 +43,8 @@
       lblFabrica = new System.Windows.Forms.Label();
       txtFabrica = new System.Windows.Forms.TextBox();
       label4 = new System.Windows.Forms.Label();
+      btnFabrica = new System.Windows.Forms.Button();
+      btnPosiciones = new System.Windows.Forms.Button();
       SuspendLayout();
       // 
       // btnConsulta
@@ -117,7 +119,7 @@
       // btnSalir
       // 
       btnSalir.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnSalir.Location = new System.Drawing.Point(447, 166);
+      btnSalir.Location = new System.Drawing.Point(447, 189);
       btnSalir.Name = "btnSalir";
       btnSalir.Size = new System.Drawing.Size(101, 34);
       btnSalir.TabIndex = 30;
@@ -128,7 +130,7 @@
       // bntBorrar
       // 
       bntBorrar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      bntBorrar.Location = new System.Drawing.Point(233, 166);
+      bntBorrar.Location = new System.Drawing.Point(233, 189);
       bntBorrar.Name = "bntBorrar";
       bntBorrar.Size = new System.Drawing.Size(101, 34);
       bntBorrar.TabIndex = 29;
@@ -139,7 +141,7 @@
       // btnLimpiar
       // 
       btnLimpiar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnLimpiar.Location = new System.Drawing.Point(126, 166);
+      btnLimpiar.Location = new System.Drawing.Point(126, 189);
       btnLimpiar.Name = "btnLimpiar";
       btnLimpiar.Size = new System.Drawing.Size(101, 34);
       btnLimpiar.TabIndex = 28;
@@ -150,7 +152,7 @@
       // btnGuardar
       // 
       btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnGuardar.Location = new System.Drawing.Point(19, 166);
+      btnGuardar.Location = new System.Drawing.Point(19, 189);
       btnGuardar.Name = "btnGuardar";
       btnGuardar.Size = new System.Drawing.Size(101, 34);
       btnGuardar.TabIndex = 27;
@@ -195,12 +197,36 @@
       label4.TabIndex = 33;
       label4.Text = "ID Fabrica";
       // 
+      // btnFabrica
+      // 
+      btnFabrica.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnFabrica.Location = new System.Drawing.Point(308, 149);
+      btnFabrica.Name = "btnFabrica";
+      btnFabrica.Size = new System.Drawing.Size(150, 34);
+      btnFabrica.TabIndex = 36;
+      btnFabrica.Text = "Maestro de Fabrica";
+      btnFabrica.UseVisualStyleBackColor = false;
+      btnFabrica.Click += new System.EventHandler(btnFabrica_Click);
+      // 
+      // btnPosiciones
+      // 
+      btnPosiciones.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnPosiciones.Location = new System.Drawing.Point(82, 149);
+      btnPosiciones.Name = "btnPosiciones";
+      btnPosiciones.Size = new System.Drawing.Size(146, 34);
+      btnPosiciones.TabIndex = 35;
+      btnPosiciones.Text = "Maestro de Posiciones";
+      btnPosiciones.UseVisualStyleBackColor = false;
+      btnPosiciones.Click += new System.EventHandler(btnPosiciones_Click);
+      // 
       // frmDepartamento
       // 
       AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       BackColor = System.Drawing.SystemColors.ButtonFace;
       ClientSize = new System.Drawing.Size(560, 235);
+      Controls.Add(btnFabrica);
+      Controls.Add(btnPosiciones);
       Controls.Add(btnConsultaFabrica);
       Controls.Add(lblFabrica);
       Controls.Add(txtFabrica);
@@ -217,8 +243,10 @@
       Controls.Add(lblTxNmDep);
       Controls.Add(lblTxIDDep);
       Name = "frmDepartamento";
+      StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       Text = "frmDepartamento";
       Load += new System.EventHandler(frmDepartamento_Load);
+      KeyDown += new System.Windows.Forms.KeyEventHandler(frmDepartamento_KeyDown);
       ResumeLayout(false);
       PerformLayout();
 
@@ -241,5 +269,7 @@
     public static System.Windows.Forms.Label lblFabrica;
     public static System.Windows.Forms.TextBox txtFabrica;
     public static System.Windows.Forms.Label label4;
+    public static System.Windows.Forms.Button btnFabrica;
+    public static System.Windows.Forms.Button btnPosiciones;
   }
 }

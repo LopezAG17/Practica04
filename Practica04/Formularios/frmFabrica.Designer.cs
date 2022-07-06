@@ -42,6 +42,8 @@
       txtFabrica = new System.Windows.Forms.TextBox();
       lblTxNmDep = new System.Windows.Forms.Label();
       lblTxIDDep = new System.Windows.Forms.Label();
+      btnPosiciones = new System.Windows.Forms.Button();
+      btnDepatamento = new System.Windows.Forms.Button();
       SuspendLayout();
       // 
       // btnConsultaFabrica
@@ -84,7 +86,7 @@
       // btnSalir
       // 
       btnSalir.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnSalir.Location = new System.Drawing.Point(448, 167);
+      btnSalir.Location = new System.Drawing.Point(448, 198);
       btnSalir.Name = "btnSalir";
       btnSalir.Size = new System.Drawing.Size(101, 34);
       btnSalir.TabIndex = 45;
@@ -95,7 +97,7 @@
       // bntBorrar
       // 
       bntBorrar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      bntBorrar.Location = new System.Drawing.Point(234, 167);
+      bntBorrar.Location = new System.Drawing.Point(234, 198);
       bntBorrar.Name = "bntBorrar";
       bntBorrar.Size = new System.Drawing.Size(101, 34);
       bntBorrar.TabIndex = 44;
@@ -106,7 +108,7 @@
       // btnLimpiar
       // 
       btnLimpiar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnLimpiar.Location = new System.Drawing.Point(127, 167);
+      btnLimpiar.Location = new System.Drawing.Point(127, 198);
       btnLimpiar.Name = "btnLimpiar";
       btnLimpiar.Size = new System.Drawing.Size(101, 34);
       btnLimpiar.TabIndex = 43;
@@ -117,7 +119,7 @@
       // btnGuardar
       // 
       btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnGuardar.Location = new System.Drawing.Point(20, 167);
+      btnGuardar.Location = new System.Drawing.Point(20, 198);
       btnGuardar.Name = "btnGuardar";
       btnGuardar.Size = new System.Drawing.Size(101, 34);
       btnGuardar.TabIndex = 42;
@@ -185,11 +187,35 @@
       lblTxIDDep.TabIndex = 37;
       lblTxIDDep.Text = "ID Fabrica";
       // 
+      // btnPosiciones
+      // 
+      btnPosiciones.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnPosiciones.Location = new System.Drawing.Point(308, 158);
+      btnPosiciones.Name = "btnPosiciones";
+      btnPosiciones.Size = new System.Drawing.Size(150, 34);
+      btnPosiciones.TabIndex = 51;
+      btnPosiciones.Text = "Maestro Posiciones";
+      btnPosiciones.UseVisualStyleBackColor = false;
+      btnPosiciones.Click += new System.EventHandler(btnPosiciones_Click);
+      // 
+      // btnDepatamento
+      // 
+      btnDepatamento.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnDepatamento.Location = new System.Drawing.Point(82, 158);
+      btnDepatamento.Name = "btnDepatamento";
+      btnDepatamento.Size = new System.Drawing.Size(146, 34);
+      btnDepatamento.TabIndex = 50;
+      btnDepatamento.Text = "Maestro de Departamento";
+      btnDepatamento.UseVisualStyleBackColor = false;
+      btnDepatamento.Click += new System.EventHandler(btnDepatamento_Click);
+      // 
       // frmFabrica
       // 
       AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      ClientSize = new System.Drawing.Size(560, 215);
+      ClientSize = new System.Drawing.Size(557, 244);
+      Controls.Add(btnPosiciones);
+      Controls.Add(btnDepatamento);
       Controls.Add(btnConsultaFabrica);
       Controls.Add(lblLocalidad);
       Controls.Add(txtLocalidad);
@@ -205,8 +231,10 @@
       Controls.Add(lblTxNmDep);
       Controls.Add(lblTxIDDep);
       Name = "frmFabrica";
+      StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       Text = "Maestro Fabrica";
       Load += new System.EventHandler(frmFabrica_Load);
+      KeyDown += new System.Windows.Forms.KeyEventHandler(frmFabrica_KeyDown);
       ResumeLayout(false);
       PerformLayout();
 
@@ -228,5 +256,7 @@
     public static System.Windows.Forms.TextBox txtFabrica;
     public static System.Windows.Forms.Label lblTxNmDep;
     public static System.Windows.Forms.Label lblTxIDDep;
+    public static System.Windows.Forms.Button btnPosiciones;
+    public static System.Windows.Forms.Button btnDepatamento;
   }
 }

@@ -46,46 +46,52 @@
       btnConsultaDepto = new System.Windows.Forms.Button();
       btnConsultaFabrica = new System.Windows.Forms.Button();
       btnConsulta = new System.Windows.Forms.Button();
+      btnFabrica = new System.Windows.Forms.Button();
+      btnDepatamento = new System.Windows.Forms.Button();
       SuspendLayout();
       // 
       // btnGuardar
       // 
+      btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
       btnGuardar.Location = new System.Drawing.Point(18, 232);
       btnGuardar.Name = "btnGuardar";
       btnGuardar.Size = new System.Drawing.Size(101, 34);
       btnGuardar.TabIndex = 6;
       btnGuardar.Text = "Guardar";
-      btnGuardar.UseVisualStyleBackColor = true;
+      btnGuardar.UseVisualStyleBackColor = false;
       btnGuardar.Click += new System.EventHandler(btnGuardar_Click);
       // 
       // btnLimpiar
       // 
+      btnLimpiar.BackColor = System.Drawing.SystemColors.InactiveCaption;
       btnLimpiar.Location = new System.Drawing.Point(125, 232);
       btnLimpiar.Name = "btnLimpiar";
       btnLimpiar.Size = new System.Drawing.Size(101, 34);
       btnLimpiar.TabIndex = 7;
       btnLimpiar.Text = "Limpiar";
-      btnLimpiar.UseVisualStyleBackColor = true;
+      btnLimpiar.UseVisualStyleBackColor = false;
       btnLimpiar.Click += new System.EventHandler(btnLimpiar_Click);
       // 
       // bntBorrar
       // 
+      bntBorrar.BackColor = System.Drawing.SystemColors.InactiveCaption;
       bntBorrar.Location = new System.Drawing.Point(232, 232);
       bntBorrar.Name = "bntBorrar";
       bntBorrar.Size = new System.Drawing.Size(101, 34);
       bntBorrar.TabIndex = 8;
       bntBorrar.Text = "Borrar";
-      bntBorrar.UseVisualStyleBackColor = true;
+      bntBorrar.UseVisualStyleBackColor = false;
       bntBorrar.Click += new System.EventHandler(bntBorrar_Click);
       // 
       // btnSalir
       // 
+      btnSalir.BackColor = System.Drawing.SystemColors.InactiveCaption;
       btnSalir.Location = new System.Drawing.Point(446, 232);
       btnSalir.Name = "btnSalir";
       btnSalir.Size = new System.Drawing.Size(101, 34);
       btnSalir.TabIndex = 10;
       btnSalir.Text = "Salir";
-      btnSalir.UseVisualStyleBackColor = true;
+      btnSalir.UseVisualStyleBackColor = false;
       btnSalir.Click += new System.EventHandler(btnSalir_Click);
       // 
       // label1
@@ -198,39 +204,66 @@
       // 
       // btnConsultaDepto
       // 
+      btnConsultaDepto.BackColor = System.Drawing.SystemColors.InactiveCaption;
       btnConsultaDepto.Location = new System.Drawing.Point(252, 128);
       btnConsultaDepto.Name = "btnConsultaDepto";
       btnConsultaDepto.Size = new System.Drawing.Size(27, 22);
       btnConsultaDepto.TabIndex = 3;
       btnConsultaDepto.Text = "...";
-      btnConsultaDepto.UseVisualStyleBackColor = true;
+      btnConsultaDepto.UseVisualStyleBackColor = false;
       btnConsultaDepto.Click += new System.EventHandler(btnConsultaDepto_Click);
       // 
       // btnConsultaFabrica
       // 
+      btnConsultaFabrica.BackColor = System.Drawing.SystemColors.InactiveCaption;
       btnConsultaFabrica.Location = new System.Drawing.Point(252, 154);
       btnConsultaFabrica.Name = "btnConsultaFabrica";
       btnConsultaFabrica.Size = new System.Drawing.Size(27, 22);
       btnConsultaFabrica.TabIndex = 5;
       btnConsultaFabrica.Text = "...";
-      btnConsultaFabrica.UseVisualStyleBackColor = true;
+      btnConsultaFabrica.UseVisualStyleBackColor = false;
       btnConsultaFabrica.Click += new System.EventHandler(btnConsultaFabrica_Click);
       // 
       // btnConsulta
       // 
+      btnConsulta.BackColor = System.Drawing.SystemColors.InactiveCaption;
       btnConsulta.Location = new System.Drawing.Point(252, 76);
       btnConsulta.Name = "btnConsulta";
       btnConsulta.Size = new System.Drawing.Size(27, 22);
       btnConsulta.TabIndex = 16;
       btnConsulta.Text = "...";
-      btnConsulta.UseVisualStyleBackColor = true;
+      btnConsulta.UseVisualStyleBackColor = false;
       btnConsulta.Click += new System.EventHandler(btnConsulta_Click);
+      // 
+      // btnFabrica
+      // 
+      btnFabrica.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnFabrica.Location = new System.Drawing.Point(306, 192);
+      btnFabrica.Name = "btnFabrica";
+      btnFabrica.Size = new System.Drawing.Size(150, 34);
+      btnFabrica.TabIndex = 18;
+      btnFabrica.Text = "Maestro de Fabrica";
+      btnFabrica.UseVisualStyleBackColor = false;
+      btnFabrica.Click += new System.EventHandler(btnFabrica_Click);
+      // 
+      // btnDepatamento
+      // 
+      btnDepatamento.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnDepatamento.Location = new System.Drawing.Point(80, 192);
+      btnDepatamento.Name = "btnDepatamento";
+      btnDepatamento.Size = new System.Drawing.Size(146, 34);
+      btnDepatamento.TabIndex = 17;
+      btnDepatamento.Text = "Maestro de Departamento";
+      btnDepatamento.UseVisualStyleBackColor = false;
+      btnDepatamento.Click += new System.EventHandler(btnDepatamento_Click);
       // 
       // frmPosicion
       // 
       AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       ClientSize = new System.Drawing.Size(559, 287);
+      Controls.Add(btnFabrica);
+      Controls.Add(btnDepatamento);
       Controls.Add(btnConsulta);
       Controls.Add(btnConsultaFabrica);
       Controls.Add(btnConsultaDepto);
@@ -250,6 +283,7 @@
       Controls.Add(btnLimpiar);
       Controls.Add(btnGuardar);
       Name = "frmPosicion";
+      StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       Text = "frmPosicion";
       Load += new System.EventHandler(frmPosicion_Load);
       ResumeLayout(false);
@@ -259,6 +293,8 @@
 
     #endregion
 
+    public static System.Windows.Forms.Button btnFabrica;
+    public static System.Windows.Forms.Button btnDepatamento;
     public static System.Windows.Forms.Button btnGuardar;
     public static System.Windows.Forms.Button btnLimpiar;
     public static System.Windows.Forms.Button bntBorrar;

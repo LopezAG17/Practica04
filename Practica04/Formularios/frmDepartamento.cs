@@ -18,21 +18,14 @@ namespace Practica04
     }
     private void frmDepartamento_Load(object sender, EventArgs e)
     {
-
+      this.KeyPreview = true;
     }
-    private void btnLimpiar_Click(object sender, EventArgs e)
+    private void frmDepartamento_KeyDown(object sender, KeyEventArgs e)
     {
-      Limpiar.Posiciones();
-      txtDepartamento.Focus();
-    }
-    private void btnGuardar_Click(object sender, EventArgs e)
-    {
-      btnLimpiar.PerformClick();
-      SQl.InsertDepartamento();
-
-    }
-    private void btnConsultaFabrica_Click(object sender, EventArgs e)
-    {
+      if (e.KeyCode == Keys.Escape)
+      {
+        btnSalir.PerformClick();
+      }
     }
     private void txtDepartamento_Leave(object sender, EventArgs e)
     {
@@ -41,11 +34,16 @@ namespace Practica04
         SQl.SelectDepartamento();
       }
       SQl.SelectDepartamento();
-
     }
-    private void btnSalir_Click(object sender, EventArgs e)
+    private void btnLimpiar_Click(object sender, EventArgs e)
     {
-      this.Close();
+      Limpiar.Departamentos();
+      txtDepartamento.Focus();
+    }
+    private void btnGuardar_Click(object sender, EventArgs e)
+    {
+      btnLimpiar.PerformClick();
+      SQl.InsertDepartamento();
     }
     private void bntBorrar_Click(object sender, EventArgs e)
     {
@@ -61,6 +59,27 @@ namespace Practica04
     {
       frmConsultaFabrica ConsultaFabrica = new frmConsultaFabrica();
       ConsultaFabrica.Show();
+    }
+
+    private void btnPosiciones_Click(object sender, EventArgs e)
+    {
+      frmPosicion MaestoPosiciones = new frmPosicion();
+      MaestoPosiciones.ShowDialog();
+      this.Close();
+
+    }
+    private void btnFabrica_Click(object sender, EventArgs e)
+    {
+      frmFabrica MaestoFabrica = new frmFabrica();
+      MaestoFabrica.ShowDialog();
+      this.Close();
+
+    }
+    private void btnSalir_Click(object sender, EventArgs e)
+    {
+      this.Close();
+      frmPosicion MaestoPosiciones = new frmPosicion();
+      MaestoPosiciones.ShowDialog();
     }
   }
 }

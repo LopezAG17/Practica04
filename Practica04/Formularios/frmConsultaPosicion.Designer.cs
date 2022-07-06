@@ -122,8 +122,6 @@
       KeyDown += new System.Windows.Forms.KeyEventHandler(frmConsultaPosicion_KeyDown);
       KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtBuscar_KeyPress);
       ((System.ComponentModel.ISupportInitialize)(dgv)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(dgv)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(dgv)).EndInit();
       ResumeLayout(false);
       PerformLayout();
 

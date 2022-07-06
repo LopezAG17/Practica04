@@ -83,14 +83,11 @@ namespace Practica04
   {
     public static void Posiciones()
     {
-
       frmConsultaPosicion.dgv.EnableHeadersVisualStyles = false;
       frmConsultaPosicion.dgv.ColumnHeadersVisible = true;
       frmConsultaPosicion.dgv.RowHeadersVisible = false;
-
       frmConsultaPosicion.dgv.Columns.Add("Col00", "ID Posicion");
       frmConsultaPosicion.dgv.Columns.Add("Col01", "Nombre de la Posicon");
-
       DataGridViewColumn
       column = frmConsultaPosicion.dgv.Columns[0]; column.Width = 150;
       column = frmConsultaPosicion.dgv.Columns[1]; column.Width = 582;
