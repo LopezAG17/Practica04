@@ -22,7 +22,7 @@ namespace Practica04
     }
     private void btnLimpiar_Click(object sender, EventArgs e)
     {
-      Limpiar.FormularioDep();
+      Limpiar.Posiciones();
       txtDepartamento.Focus();
     }
     private void btnGuardar_Click(object sender, EventArgs e)

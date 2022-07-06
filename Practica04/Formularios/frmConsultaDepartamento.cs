@@ -12,12 +12,16 @@ namespace Practica04
 {
   public partial class frmConsultaDepartamento : Form
   {
+    public string varf1;  
+    public string varf2;
     public frmConsultaDepartamento()
     {
       InitializeComponent();
     }
     private void frmConsultaDepartamento_Load(object sender, EventArgs e)
     {
+      this.KeyPreview = true;
+      E_Load.Departamentos();
 
     }
     private void frmConsultaDepartamento_KeyDown(object sender, KeyEventArgs e)
@@ -25,6 +29,17 @@ namespace Practica04
       if (e.KeyCode == Keys.Escape)
       {
         this.Close();
+      }
+    }
+    private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      if ((int)e.KeyChar == (int)Keys.Enter)
+      {
+        e.Handled = true;
+        if (txtBuscar.Text.Trim() != string.Empty)
+        {
+          btnBuscar.PerformClick();
+        }
       }
     }
     private void txtBuscar_Leave(object sender, EventArgs e)
@@ -37,7 +52,16 @@ namespace Practica04
     }
     private void btnSeleccionar_Click(object sender, EventArgs e)
     {
-
+      try
+      { 
+        varf1 = dgv.CurrentRow.Cells[0].Value.ToString();
+        varf2 = dgv.CurrentRow.Cells[1].Value.ToString();
+        this.Close();
+      }
+      catch
+      {
+        //
+      }
     }
     private void btnCerrar_Click(object sender, EventArgs e)
     {

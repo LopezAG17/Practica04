@@ -26,11 +26,10 @@ namespace Practica04
       {
         SQl.SelectFabrica();
       }
-      SQl.SelectFabrica();
     }
     private void btnLimpiar_Click_1(object sender, EventArgs e)
     {
-      Limpiar.FormularioFab();
+      Limpiar.Fabricas();
       txtFabrica.Focus();
     }
     private void btnGuardar_Click(object sender, EventArgs e)
@@ -50,12 +49,12 @@ namespace Practica04
     private void btnConsulta_Click(object sender, EventArgs e)
     {
       frmConsultaFabrica Consulta = new frmConsultaFabrica();
-      Consulta.Show();
+      Consulta.ShowDialog();
     }
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
     {
       frmConsultaFabrica ConsultaLocalidad = new frmConsultaFabrica();
-      ConsultaLocalidad.Show();
+      ConsultaLocalidad.ShowDialog();
     }
   }
 }

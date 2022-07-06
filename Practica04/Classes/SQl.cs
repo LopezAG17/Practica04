@@ -19,15 +19,11 @@ namespace Practica04
     public static void SelectPosicion()
     {
       Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("    SELECT a.NombreDePosicion,  " +
-                                                  "           a.Fabrica,  " +
-                                                  "           a.Departamento,  " +
-                                                  "           B.NombreDefabrica,   " +
-                                                  "           C.NombreDepartamento  " +
-                                                  "      FROM POSICIONES   A " +
-                                                  " LEFT join FABRICA      B on a.Fabrica      = b.IDfabrica " +
-                                                  " LEFT join DEPARTAMENTO C on A.Departamento = C.IDdepartamento " +
-                                                  "WHERE IDPOSICION =@PV", Db.cnx);
+      SqlCommand cmmnd = new SqlCommand("SELECT a.NombreDePosicion, a.Fabrica,a.Departamento,c.NombreDepartamento,b.NombreDeFabrica " +
+                                        "FROM POSICIONES A " +
+                                        "LEFT join FABRICA B on a.Fabrica = b.IDfabrica " +
+                                        "LEFT join DEPARTAMENTO C on A.Departamento = C.IDdepartamento " +
+                                        "WHERE a.IDPOSICION =@PV", Db.cnx);
 
       cmmnd.Parameters.AddWithValue("@PV", frmPosicion.txtPosicion.Text);
       SqlDataReader recordn = cmmnd.ExecuteReader();
@@ -40,10 +36,7 @@ namespace Practica04
         frmPosicion.lblDepartamento.Text = Convert.ToString(recordn["NombreDefabrica"]);
         frmPosicion.lblFabricaNombre.Text = Convert.ToString(recordn["NombreDepartamento"]);
       }
-      else
-      {
-        MessageBox.Show("No se encontro el registro");
-      }
+
 
       cmmnd.Dispose();
       Db.cnx.Close();
@@ -87,10 +80,6 @@ namespace Practica04
         frmDepartamento.lblFabricaNombre.Text = Convert.ToString(recordn["NombreDefabrica"]);
         frmDepartamento.lblFabrica.Text = Convert.ToString(recordn["NombreDepartamento"]);
       }
-      else
-      {
-        MessageBox.Show("No existe el departamento");
-      }
 
       cmmnd.Dispose();
       Db.cnx.Close();
@@ -132,10 +121,6 @@ namespace Practica04
         frmFabrica.txtLocalidad.Text = Convert.ToString(recordn["Localidad"]);
         frmFabrica.lblLocalidad.Text = Convert.ToString(recordn["NombreLocalidad"]);
       }
-      else
-      {
-        MessageBox.Show("No existe la fabrica");
-      }
       cmmnd.Dispose();
       Db.cnx.Close();
     }
@@ -164,31 +149,85 @@ namespace Practica04
   {
     public static void BuscarDepartamento()
     {
+      frmConsultaDepartamento.dgv.Rows.Clear();
+      frmConsultaDepartamento.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand cmd = new SqlCommand("SELECT IDdeDepartamento, NombreDEpartamento " +
-                                      "FROM Departamento " +
-                                      "Where NombreDepartamento " +
-                                      "like '%" + frmConsultaDepartamento.txtBuscar + "%' " +
-                                      "Order by NombreDepartamento ASC", Db.cnx);
+      SqlCommand PCmd = new SqlCommand("SELECT IdDepartamento, NombreDepartamento " +
+                                       "FROM Departamento " +
+                                       "WHERE NombreDepartamento LIKE '%" + frmConsultaDepartamento.txtBuscar.Text + "%'" +
+                                       "ORDER BY IdDepartamento ASC", Db.cnx);
+      SqlDataReader recordset = PCmd.ExecuteReader();
+      try
+      {
+        while (recordset.Read())
+        {
+          frmConsultaDepartamento.dgv.Rows.Add();
+          int xRows = frmConsultaDepartamento.dgv.Rows.Count - 2;
+          frmConsultaDepartamento.dgv[0, xRows].Value = Convert.ToString(recordset["IdDepartamento"]);
+          frmConsultaDepartamento.dgv[1, xRows].Value = Convert.ToString(recordset["NombreDepartamento"]);
+        }
+      }
+      catch
+      {
+        //
+      }
+      PCmd.Dispose();
+      Db.cnx.Close();
     }
     public static void BuscarPosicion()
     {
+      frmConsultaPosicion.dgv.Rows.Clear();
+      frmConsultaPosicion.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand cmd = new SqlCommand("SELECT IDdePosicion, NombrePosicion " +
-                                      "FROM Posicion " +
-                                      "Where NombrePosicion " +
-                                      "like '%" + frmConsultaPosicion.txtBuscar + "%' " +
-                                      "Order by NombrePosicion ASC", Db.cnx);
+      SqlCommand PCmd = new SqlCommand("SELECT IDposicion, NombreDePosicion " +
+                                       "FROM Posiciones " +
+                                       "WHERE NombreDePosicion LIKE '%" + frmConsultaPosicion.txtBuscar.Text + "%'" +
+                                       "ORDER BY IDposicion ASC", Db.cnx);
+      SqlDataReader recordset = PCmd.ExecuteReader();
+      try
+      {
+        while (recordset.Read())
+        {
+          frmConsultaPosicion.dgv.Rows.Add();
+          int xRows = frmConsultaPosicion.dgv.Rows.Count - 2;
+          frmConsultaPosicion.dgv[0, xRows].Value = Convert.ToString(recordset["IdPosicion"]);
+          frmConsultaPosicion.dgv[1, xRows].Value = Convert.ToString(recordset["NombreDePosicion"]);
+        }
+      }
+      catch
+      {
+        //
+      }
+      PCmd.Dispose();
+      Db.cnx.Close();
     }
     public static void BuscarFabrica()
     {
+      frmConsultaFabrica.dgv.Rows.Clear();
+      frmConsultaFabrica.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand cmd = new SqlCommand("SELECT IDdeFabrica, NombreFabrica " +
-                                      "FROM Fabrica " +
-                                      "Where NombreFabrica " +
-                                      "like '%" + frmConsultaFabrica.txtBuscar + "%' " +
-                                      "Order by NombreFabrica ASC", Db.cnx);
+      SqlCommand Fcmd = new SqlCommand("SELECT IDFabrica, NombreDeFabrica,Localidad " +
+                                       "FROM Fabrica " +
+                                       "WHERE NombreDeFabrica LIKE '%" + frmConsultaFabrica.txtBuscar.Text + "%'" +
+                                       "ORDER BY IdFabrica ASC", Db.cnx);
+      SqlDataReader recordset = Fcmd.ExecuteReader();
+      try
+      {
+        while (recordset.Read())
+        {  // no es fin de archivo true false
+          frmConsultaFabrica.dgv.Rows.Add();
+          int xRows = frmConsultaFabrica.dgv.Rows.Count - 2;
+          frmConsultaFabrica.dgv[0, xRows].Value = Convert.ToString(recordset["IdFabrica"]);
+          frmConsultaFabrica.dgv[1, xRows].Value = Convert.ToString(recordset["NombreDeFabrica"]);
+          frmConsultaFabrica.dgv[2, xRows].Value = Convert.ToString(recordset["Localidad"]);
+        }
+      }
+      catch
+      {
+        //
+      }
+      Fcmd.Dispose();
+      Db.cnx.Close();
     }
-
   }
 }
