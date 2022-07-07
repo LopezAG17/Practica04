@@ -46,6 +46,10 @@ namespace Practica04
     {
       DGridView.BuscarPosicion();
     }
+    private void dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    {
+      btnSeleccionar.PerformClick();
+    }
     private void btnBuscar_Click(object sender, EventArgs e)
     {
       DGridView.BuscarPosicion();

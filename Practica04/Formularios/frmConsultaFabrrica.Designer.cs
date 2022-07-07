@@ -103,6 +103,7 @@
       dgv.Name = "dgv";
       dgv.Size = new System.Drawing.Size(732, 328);
       dgv.TabIndex = 30;
+      dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(dgv_CellDoubleClick);
       // 
       // frmConsultaFabrica
       // 

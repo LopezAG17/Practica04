@@ -12,7 +12,7 @@ namespace Practica04
 {
   public partial class frmConsultaDepartamento : Form
   {
-    public string varf1;  
+    public string varf1;
     public string varf2;
     public frmConsultaDepartamento()
     {
@@ -46,6 +46,10 @@ namespace Practica04
     {
       DGridView.BuscarDepartamento();
     }
+    private void dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    {
+      btnSeleccionar.PerformClick();
+    }
     private void btnBuscar_Click(object sender, EventArgs e)
     {
       DGridView.BuscarDepartamento();
@@ -53,7 +57,7 @@ namespace Practica04
     private void btnSeleccionar_Click(object sender, EventArgs e)
     {
       try
-      { 
+      {
         varf1 = dgv.CurrentRow.Cells[0].Value.ToString();
         varf2 = dgv.CurrentRow.Cells[1].Value.ToString();
         this.Close();

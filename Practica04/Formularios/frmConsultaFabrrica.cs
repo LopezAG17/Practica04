@@ -14,6 +14,7 @@ namespace Practica04
   {
     public string varf1;
     public string varf2;
+    public string varf3;
     public frmConsultaFabrica()
     {
       InitializeComponent();
@@ -45,6 +46,10 @@ namespace Practica04
     {
       DGridView.BuscarFabrica();
     }
+    private void dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    {
+      btnSeleccionar.PerformClick();
+    }
     private void btnBuscar_Click(object sender, EventArgs e)
     {
       DGridView.BuscarFabrica();
@@ -55,6 +60,7 @@ namespace Practica04
       { //Data grid View 
         varf1 = dgv.CurrentRow.Cells[0].Value.ToString();
         varf2 = dgv.CurrentRow.Cells[1].Value.ToString();
+        varf3 = dgv.CurrentRow.Cells[2].Value.ToString();
         this.Close();
       }
       catch
