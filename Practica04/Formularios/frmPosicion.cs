@@ -179,7 +179,7 @@ namespace Practica04
     // ------------------------------------------------------------------
     private void btnSalir_Click(object sender, EventArgs e)
     {
-      this.Close(); // Cierra este formulario
+      Application.Exit();
     }
     // ------------------------------------------------------------------
     // Evento Boton Cnsulta Departamento

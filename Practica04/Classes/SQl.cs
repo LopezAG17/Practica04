@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;  // permite hacer el llamado a la base de datos
-using System.Windows.Forms;
 
 namespace Practica04
 {
@@ -53,7 +48,7 @@ namespace Practica04
     public static void InsertPosicion()
     {
       Db.cnx.Open();
-      SqlCommand cmmnd = new SqlCommand("INSERT INTO POSICIONES (NOMBREDEPOSICION, FABRICA, DEPARTAMENTO) VALUES (@NOMBREDEPOSICION, @FABRICA, @DEPARTAMENTO)", Db.cnx);
+      SqlCommand cmmnd = new SqlCommand("INSERT INTO POSICIONES (NOMBREDEPOSICION, FABRICA, DEPARTAMENTO) VALUES (@A0,@A1,@A2,@A3)", Db.cnx);
       cmmnd.Parameters.AddWithValue("@A0", frmPosicion.txtPosicion.Text);
       cmmnd.Parameters.AddWithValue("@A1", frmPosicion.txtNombrePosicion.Text);
       cmmnd.Parameters.AddWithValue("@A2", frmPosicion.txtFabrica.Text);
@@ -162,7 +157,7 @@ namespace Practica04
         while (recordset.Read())
         {
           frmConsultaDepartamento.dgv.Rows.Add();
-          int xRows = frmConsultaDepartamento.dgv.Rows.Count - 2;
+          int xRows = frmConsultaDepartamento.dgv.Rows.Count - 1;
           frmConsultaDepartamento.dgv[0, xRows].Value = Convert.ToString(recordset["IdDepartamento"]);
           frmConsultaDepartamento.dgv[1, xRows].Value = Convert.ToString(recordset["NombreDepartamento"]);
         }
@@ -189,7 +184,7 @@ namespace Practica04
         while (recordset.Read())
         {
           frmConsultaPosicion.dgv.Rows.Add();
-          int xRows = frmConsultaPosicion.dgv.Rows.Count - 2;
+          int xRows = frmConsultaPosicion.dgv.Rows.Count - 1;
           frmConsultaPosicion.dgv[0, xRows].Value = Convert.ToString(recordset["IdPosicion"]);
           frmConsultaPosicion.dgv[1, xRows].Value = Convert.ToString(recordset["NombreDePosicion"]);
         }
@@ -216,7 +211,7 @@ namespace Practica04
         while (recordset.Read())
         {  // no es fin de archivo true false
           frmConsultaFabrica.dgv.Rows.Add();
-          int xRows = frmConsultaFabrica.dgv.Rows.Count - 2;
+          int xRows = frmConsultaFabrica.dgv.Rows.Count - 1;
           frmConsultaFabrica.dgv[0, xRows].Value = Convert.ToString(recordset["IdFabrica"]);
           frmConsultaFabrica.dgv[1, xRows].Value = Convert.ToString(recordset["NombreDeFabrica"]);
           frmConsultaFabrica.dgv[2, xRows].Value = Convert.ToString(recordset["Localidad"]);
