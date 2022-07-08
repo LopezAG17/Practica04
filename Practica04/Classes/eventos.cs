@@ -123,5 +123,4 @@ namespace Practica04
       Diseño.Fabricas();
     }
   }
-
 }
