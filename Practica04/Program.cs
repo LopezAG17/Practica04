@@ -10,7 +10,7 @@ namespace Practica04
   {
     /// <summary>
     /// The main entry point for the application.
-    /// </summary>
+    // / </summary>
 
     /// -------------------------------------------------------------------------------
     /// cuando se corre el proyecto este programa es el primero que buscar y lo ejecuta

@@ -61,6 +61,12 @@
     <Compile Include="Formularios\frmConsultaFabrrica.Designer.cs">
       <DependentUpon>frmConsultaFabrrica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmConsultaLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaLocalidad.Designer.cs">
+      <DependentUpon>frmConsultaLocalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConsultaPosicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="Formularios\frmFabrica.Designer.cs">
       <DependentUpon>frmFabrica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLocalidad.Designer.cs">
+      <DependentUpon>frmLocalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmPosicion.cs">
       <SubType>Form</SubType>
@@ -105,6 +117,9 @@
     <EmbeddedResource Include="Formularios\frmConsultaFabrrica.resx">
       <DependentUpon>frmConsultaFabrrica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaLocalidad.resx">
+      <DependentUpon>frmConsultaLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsultaPosicion.resx">
       <DependentUpon>frmConsultaPosicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFabrica.resx">
       <DependentUpon>frmFabrica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLocalidad.resx">
+      <DependentUpon>frmLocalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPosicion.resx">
       <DependentUpon>frmPosicion.cs</DependentUpon>

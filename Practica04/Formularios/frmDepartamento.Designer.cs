@@ -45,6 +45,7 @@
       label4 = new System.Windows.Forms.Label();
       btnFabrica = new System.Windows.Forms.Button();
       btnPosiciones = new System.Windows.Forms.Button();
+      btnLocalidad = new System.Windows.Forms.Button();
       SuspendLayout();
       // 
       // btnConsulta
@@ -94,6 +95,7 @@
       txtDepartamento.Name = "txtDepartamento";
       txtDepartamento.Size = new System.Drawing.Size(65, 20);
       txtDepartamento.TabIndex = 17;
+      txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtDepartamento_KeyPress);
       txtDepartamento.Leave += new System.EventHandler(txtDepartamento_Leave);
       // 
       // lblTxNmDep
@@ -200,7 +202,7 @@
       // btnFabrica
       // 
       btnFabrica.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnFabrica.Location = new System.Drawing.Point(308, 149);
+      btnFabrica.Location = new System.Drawing.Point(206, 151);
       btnFabrica.Name = "btnFabrica";
       btnFabrica.Size = new System.Drawing.Size(150, 34);
       btnFabrica.TabIndex = 36;
@@ -211,7 +213,7 @@
       // btnPosiciones
       // 
       btnPosiciones.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnPosiciones.Location = new System.Drawing.Point(82, 149);
+      btnPosiciones.Location = new System.Drawing.Point(36, 151);
       btnPosiciones.Name = "btnPosiciones";
       btnPosiciones.Size = new System.Drawing.Size(146, 34);
       btnPosiciones.TabIndex = 35;
@@ -219,12 +221,25 @@
       btnPosiciones.UseVisualStyleBackColor = false;
       btnPosiciones.Click += new System.EventHandler(btnPosiciones_Click);
       // 
+      // btnLocalidad
+      // 
+      btnLocalidad.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnLocalidad.Location = new System.Drawing.Point(379, 151);
+      btnLocalidad.Name = "btnLocalidad";
+      btnLocalidad.Size = new System.Drawing.Size(150, 34);
+      btnLocalidad.TabIndex = 37;
+      btnLocalidad.Text = "Maestro de Localidad";
+      btnLocalidad.UseVisualStyleBackColor = false;
+      btnLocalidad.Click += new System.EventHandler(btnLocalidad_Click);
+
+      // 
       // frmDepartamento
       // 
       AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       BackColor = System.Drawing.SystemColors.ButtonFace;
       ClientSize = new System.Drawing.Size(560, 235);
+      Controls.Add(btnLocalidad);
       Controls.Add(btnFabrica);
       Controls.Add(btnPosiciones);
       Controls.Add(btnConsultaFabrica);
@@ -254,6 +269,7 @@
 
     #endregion
 
+    public static System.Windows.Forms.Button btnLocalidad;
     public static System.Windows.Forms.Button btnConsulta;
     public static System.Windows.Forms.Label label5;
     public static System.Windows.Forms.Label lblFabricaNombre;

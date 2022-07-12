@@ -229,5 +229,11 @@ namespace Practica04
       MaestroFabrica.ShowDialog();
       this.Close();
     }
+    private void btnLocalidad_Click(object sender, EventArgs e)
+    {
+      frmLocalidad MaestroLocalidad = new frmLocalidad();
+      MaestroLocalidad.ShowDialog();
+      this.Close();
+    }
   }
 }

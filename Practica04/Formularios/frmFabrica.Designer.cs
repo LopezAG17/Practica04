@@ -44,6 +44,7 @@
       lblTxIDDep = new System.Windows.Forms.Label();
       btnPosiciones = new System.Windows.Forms.Button();
       btnDepatamento = new System.Windows.Forms.Button();
+      btnLocalidad = new System.Windows.Forms.Button();
       SuspendLayout();
       // 
       // btnConsultaFabrica
@@ -190,7 +191,7 @@
       // btnPosiciones
       // 
       btnPosiciones.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnPosiciones.Location = new System.Drawing.Point(308, 158);
+      btnPosiciones.Location = new System.Drawing.Point(203, 158);
       btnPosiciones.Name = "btnPosiciones";
       btnPosiciones.Size = new System.Drawing.Size(150, 34);
       btnPosiciones.TabIndex = 51;
@@ -201,7 +202,7 @@
       // btnDepatamento
       // 
       btnDepatamento.BackColor = System.Drawing.SystemColors.InactiveCaption;
-      btnDepatamento.Location = new System.Drawing.Point(82, 158);
+      btnDepatamento.Location = new System.Drawing.Point(37, 158);
       btnDepatamento.Name = "btnDepatamento";
       btnDepatamento.Size = new System.Drawing.Size(146, 34);
       btnDepatamento.TabIndex = 50;
@@ -209,11 +210,23 @@
       btnDepatamento.UseVisualStyleBackColor = false;
       btnDepatamento.Click += new System.EventHandler(btnDepatamento_Click);
       // 
+      // btnLocalidad
+      // 
+      btnLocalidad.BackColor = System.Drawing.SystemColors.InactiveCaption;
+      btnLocalidad.Location = new System.Drawing.Point(380, 158);
+      btnLocalidad.Name = "btnLocalidad";
+      btnLocalidad.Size = new System.Drawing.Size(150, 34);
+      btnLocalidad.TabIndex = 52;
+      btnLocalidad.Text = "Maestro de Localidad";
+      btnLocalidad.UseVisualStyleBackColor = false;
+      btnLocalidad.Click += new System.EventHandler(btnLocalidad_Click);
+      // 
       // frmFabrica
       // 
       AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       ClientSize = new System.Drawing.Size(557, 244);
+      Controls.Add(btnLocalidad);
       Controls.Add(btnPosiciones);
       Controls.Add(btnDepatamento);
       Controls.Add(btnConsultaFabrica);
@@ -242,6 +255,7 @@
 
     #endregion
 
+    public static System.Windows.Forms.Button btnLocalidad;
     public static System.Windows.Forms.Button btnConsultaFabrica;
     public static System.Windows.Forms.Label lblLocalidad;
     public static System.Windows.Forms.TextBox txtLocalidad;

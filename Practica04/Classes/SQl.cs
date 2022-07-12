@@ -134,6 +134,42 @@ namespace Practica04
       cmmnd.Dispose();
       Db.cnx.Close();
     }
+    public static void SelectLocalidad()
+    {
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("SELECT NombreLocalidad " +
+                                        "From Localidad " +
+                                        "WHERE IDLocalidad =@PV",
+                                        Db.cnx);
+
+      cmmnd.Parameters.AddWithValue("@PV", Convert.ToString(frmLocalidad.txtLocalidad.Text));
+      SqlDataReader recordn = cmmnd.ExecuteReader();
+      if (recordn.Read())
+      {
+        frmLocalidad.txtNombreLocalidad.Text = Convert.ToString(recordn["NombreLocalidad"]);
+      }
+      cmmnd.Dispose();
+      Db.cnx.Close();
+    }
+    public static void DeleteLocalidad()
+    {
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("DELETE FROM LOCALIDAD WHERE IDLocalidad = @RG", Db.cnx);
+      cmmnd.Parameters.AddWithValue("@RG", frmLocalidad.txtLocalidad.Text);
+      cmmnd.ExecuteNonQuery();
+      cmmnd.Dispose();
+      Db.cnx.Close();
+    }
+    public static void InsertLocalidad()
+    {
+      Db.cnx.Open();
+      SqlCommand cmmnd = new SqlCommand("INSERT INTO LOCALIDAD (IDLocalidad, NombreLocalidad) VALUES (@A0, @A1)", Db.cnx);
+      cmmnd.Parameters.AddWithValue("@A0", frmLocalidad.txtLocalidad.Text);
+      cmmnd.Parameters.AddWithValue("@A1", frmLocalidad.txtNombreLocalidad.Text);
+      cmmnd.ExecuteNonQuery();
+      cmmnd.Dispose();
+      Db.cnx.Close();
+    }
   }
   public static class DGridView
   {
@@ -217,6 +253,33 @@ namespace Practica04
         //
       }
       Fcmd.Dispose();
+      Db.cnx.Close();
+    }
+    public static void BuscarLocalidad()
+    {
+      frmConsultaLocalidad.dgv.Rows.Clear();
+      frmConsultaLocalidad.dgv.Refresh();
+      Db.cnx.Open();
+      SqlCommand Lcmd = new SqlCommand("SELECT IDLocalidad, NombreLocalidad " +
+                                       "FROM Localidad " +
+                                       "WHERE NombreLocalidad LIKE '%" + frmConsultaLocalidad.txtBuscar.Text + "%'" +
+                                       "ORDER BY IdLocalidad ASC", Db.cnx);
+      SqlDataReader recordset = Lcmd.ExecuteReader();
+      try
+      {
+        while (recordset.Read())
+        {
+          frmConsultaLocalidad.dgv.Rows.Add();
+          int xRows = frmConsultaLocalidad.dgv.Rows.Count - 1;
+          frmConsultaLocalidad.dgv[0, xRows].Value = Convert.ToString(recordset["IdLocalidad"]);
+          frmConsultaLocalidad.dgv[1, xRows].Value = Convert.ToString(recordset["NombreLocalidad"]);
+        }
+      }
+      catch
+      {
+        //
+      }
+      Lcmd.Dispose();
       Db.cnx.Close();
     }
   }

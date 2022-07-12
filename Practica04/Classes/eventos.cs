@@ -30,6 +30,11 @@ namespace Practica04
       frmFabrica.txtNombreFabrica.Clear();
       frmFabrica.lblLocalidad.Text = "";
     }
+    public static void Localidades()
+    {
+      frmLocalidad.txtLocalidad.Clear();
+      frmLocalidad.txtNombreLocalidad.Clear();
+    }
   }
   public static class Diseño
   {
@@ -51,9 +56,9 @@ namespace Practica04
     }
     public static void Departamentos()
     {
-      //frmConsultaDepartamento.dgv.AllowUserToAddRows = false;
-      //frmConsultaDepartamento.dgv.AllowUserToDeleteRows = false;
-      //frmConsultaDepartamento.dgv.EnableHeadersVisualStyles = false;
+      frmConsultaDepartamento.dgv.AllowUserToAddRows = false;
+      frmConsultaDepartamento.dgv.AllowUserToDeleteRows = false;
+      frmConsultaDepartamento.dgv.EnableHeadersVisualStyles = false;
       frmConsultaDepartamento.dgv.BorderStyle = BorderStyle.None;
       frmConsultaDepartamento.dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
       frmConsultaDepartamento.dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -80,6 +85,22 @@ namespace Practica04
       frmConsultaFabrica.dgv.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 6, 0, 6);
       frmConsultaFabrica.dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.CornflowerBlue;
       frmConsultaFabrica.dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+    }
+    public static void Localidades()
+    {
+      frmConsultaLocalidad.dgv.AllowUserToAddRows = false;
+      frmConsultaLocalidad.dgv.AllowUserToDeleteRows = false;
+      frmConsultaLocalidad.dgv.EnableHeadersVisualStyles = false;
+      frmConsultaLocalidad.dgv.BorderStyle = BorderStyle.None;
+      frmConsultaLocalidad.dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+      frmConsultaLocalidad.dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+      frmConsultaLocalidad.dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+      frmConsultaLocalidad.dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+      frmConsultaLocalidad.dgv.BackgroundColor = Color.LightGray;
+      frmConsultaLocalidad.dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+      frmConsultaLocalidad.dgv.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 6, 0, 6);
+      frmConsultaLocalidad.dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.CornflowerBlue;
+      frmConsultaLocalidad.dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
     }
   }
   public static class E_Load
@@ -121,6 +142,18 @@ namespace Practica04
       column = frmConsultaFabrica.dgv.Columns[1]; column.Width = 400;
       column = frmConsultaFabrica.dgv.Columns[2]; column.Width = 180;
       Diseño.Fabricas();
+    }
+    public static void Localidades()
+    {
+      frmConsultaLocalidad.dgv.EnableHeadersVisualStyles = false;
+      frmConsultaLocalidad.dgv.ColumnHeadersVisible = true;
+      frmConsultaLocalidad.dgv.RowHeadersVisible = false;
+      frmConsultaLocalidad.dgv.Columns.Add("Col00", "ID Localidad");
+      frmConsultaLocalidad.dgv.Columns.Add("Col01", "Nombre de la Localidad");
+      DataGridViewColumn
+      column = frmConsultaLocalidad.dgv.Columns[0]; column.Width = 150;
+      column = frmConsultaLocalidad.dgv.Columns[1]; column.Width = 582;
+      Diseño.Localidades();
     }
   }
 }

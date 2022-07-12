@@ -39,3 +39,5 @@ D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Pr
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmConsultaDepartamento.resources
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmConsultaFabrica.resources
 D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmConsultaPosicion.resources
+D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmConsultaLocalidad.resources
+D:\Universidad\ProgramacionSRC\Lenguajes\C\C#\Practica04\Practica04\obj\Debug\Practica04.frmLocalidad.resources
