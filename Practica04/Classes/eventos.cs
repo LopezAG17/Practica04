@@ -51,9 +51,9 @@ namespace Practica04
     }
     public static void Departamentos()
     {
-      frmConsultaDepartamento.dgv.AllowUserToAddRows = false;
-      frmConsultaDepartamento.dgv.AllowUserToDeleteRows = false;
-      frmConsultaDepartamento.dgv.EnableHeadersVisualStyles = false;
+      //frmConsultaDepartamento.dgv.AllowUserToAddRows = false;
+      //frmConsultaDepartamento.dgv.AllowUserToDeleteRows = false;
+      //frmConsultaDepartamento.dgv.EnableHeadersVisualStyles = false;
       frmConsultaDepartamento.dgv.BorderStyle = BorderStyle.None;
       frmConsultaDepartamento.dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
       frmConsultaDepartamento.dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;

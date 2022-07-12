@@ -10,7 +10,6 @@ namespace Practica04
   }
   public static class SQl
   {
-
     public static void SelectPosicion()
     {
       Db.cnx.Open();
@@ -18,7 +17,8 @@ namespace Practica04
                                         "FROM POSICIONES A " +
                                         "LEFT join FABRICA B on a.Fabrica = b.IDfabrica " +
                                         "LEFT join DEPARTAMENTO C on A.Departamento = C.IDdepartamento " +
-                                        "WHERE a.IDPOSICION =@PV", Db.cnx);
+                                        "WHERE a.IDPOSICION =@PV",
+                                        Db.cnx);
 
       cmmnd.Parameters.AddWithValue("@PV", frmPosicion.txtPosicion.Text);
       SqlDataReader recordn = cmmnd.ExecuteReader();
@@ -27,12 +27,9 @@ namespace Practica04
         frmPosicion.txtNombrePosicion.Text = Convert.ToString(recordn["NOMBREDEPOSICION"]);
         frmPosicion.txtDepartamento.Text = Convert.ToString(recordn["DEPARTAMENTO"]);
         frmPosicion.txtFabrica.Text = Convert.ToString(recordn["FABRICA"]);
-
         frmPosicion.lblDepartamento.Text = Convert.ToString(recordn["NombreDefabrica"]);
         frmPosicion.lblFabricaNombre.Text = Convert.ToString(recordn["NombreDepartamento"]);
       }
-
-
       cmmnd.Dispose();
       Db.cnx.Close();
     }
@@ -63,8 +60,7 @@ namespace Practica04
       SqlCommand cmmnd = new SqlCommand("SELECT a.NombreDepartamento, a.IdFabrica, b.NombreDefabrica " +
                                         "From Departamento A LEFT JOIN Fabrica B ON a.IDfabrica = b.IDfabrica " +
                                         "WHERE a.IDdepartamento =@PV",
-                                        Db.cnx
-                                       );
+                                        Db.cnx);
 
       cmmnd.Parameters.AddWithValue("@PV", Convert.ToString(frmDepartamento.txtDepartamento.Text));
       SqlDataReader recordn = cmmnd.ExecuteReader();
@@ -105,8 +101,7 @@ namespace Practica04
       SqlCommand cmmnd = new SqlCommand("SELECT b.NombreLocalidad, a.NombreDeFabrica, a.Localidad, a.IDfabrica " +
                                         "FROM Fabrica A Left Join Localidad B On  A.Localidad = B.IDLocalidad " +
                                         "WHERE a.IDfabrica =@PV",
-                                        Db.cnx
-                                       );
+                                        Db.cnx);
 
       cmmnd.Parameters.AddWithValue("@PV", Convert.ToString(frmFabrica.txtFabrica.Text));
       SqlDataReader recordn = cmmnd.ExecuteReader();

@@ -42,8 +42,9 @@ namespace Practica04
     }
     private void btnGuardar_Click(object sender, EventArgs e)
     {
-      btnLimpiar.PerformClick();
       SQl.InsertDepartamento();
+      btnLimpiar.PerformClick();
+
     }
     private void bntBorrar_Click(object sender, EventArgs e)
     {
