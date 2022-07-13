@@ -178,11 +178,11 @@ namespace Practica04
       frmConsultaDepartamento.dgv.Rows.Clear();
       frmConsultaDepartamento.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand PCmd = new SqlCommand("SELECT IdDepartamento, NombreDepartamento " +
-                                       "FROM Departamento " +
-                                       "WHERE NombreDepartamento LIKE '%" + frmConsultaDepartamento.txtBuscar.Text + "%'" +
-                                       "ORDER BY IdDepartamento ASC", Db.cnx);
-      SqlDataReader recordset = PCmd.ExecuteReader();
+      SqlCommand PCmmd = new SqlCommand("SELECT IdDepartamento, NombreDepartamento " +
+                                        "FROM Departamento " +
+                                        "WHERE NombreDepartamento LIKE '%" + frmConsultaDepartamento.txtBuscar.Text + "%'" +
+                                        "ORDER BY IdDepartamento ASC", Db.cnx);
+      SqlDataReader recordset = PCmmd.ExecuteReader();
       try
       {
         while (recordset.Read())
@@ -197,7 +197,7 @@ namespace Practica04
       {
         //
       }
-      PCmd.Dispose();
+      PCmmd.Dispose();
       Db.cnx.Close();
     }
     public static void BuscarPosicion()
@@ -205,11 +205,11 @@ namespace Practica04
       frmConsultaPosicion.dgv.Rows.Clear();
       frmConsultaPosicion.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand PCmd = new SqlCommand("SELECT IDposicion, NombreDePosicion " +
-                                       "FROM Posiciones " +
-                                       "WHERE NombreDePosicion LIKE '%" + frmConsultaPosicion.txtBuscar.Text + "%'" +
-                                       "ORDER BY IDposicion ASC", Db.cnx);
-      SqlDataReader recordset = PCmd.ExecuteReader();
+      SqlCommand PCmmd = new SqlCommand("SELECT IDposicion, NombreDePosicion " +
+                                        "FROM Posiciones " +
+                                        "WHERE NombreDePosicion LIKE '%" + frmConsultaPosicion.txtBuscar.Text + "%'" +
+                                        "ORDER BY IDposicion ASC", Db.cnx);
+      SqlDataReader recordset = PCmmd.ExecuteReader();
       try
       {
         while (recordset.Read())
@@ -224,7 +224,7 @@ namespace Practica04
       {
         //
       }
-      PCmd.Dispose();
+      PCmmd.Dispose();
       Db.cnx.Close();
     }
     public static void BuscarFabrica()
@@ -232,11 +232,11 @@ namespace Practica04
       frmConsultaFabrica.dgv.Rows.Clear();
       frmConsultaFabrica.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand Fcmd = new SqlCommand("SELECT IDFabrica, NombreDeFabrica,Localidad " +
-                                       "FROM Fabrica " +
-                                       "WHERE NombreDeFabrica LIKE '%" + frmConsultaFabrica.txtBuscar.Text + "%'" +
-                                       "ORDER BY IdFabrica ASC", Db.cnx);
-      SqlDataReader recordset = Fcmd.ExecuteReader();
+      SqlCommand Fcmmd = new SqlCommand("SELECT IDFabrica, NombreDeFabrica,Localidad " +
+                                        "FROM Fabrica " +
+                                        "WHERE NombreDeFabrica LIKE '%" + frmConsultaFabrica.txtBuscar.Text + "%'" +
+                                        "ORDER BY IdFabrica ASC", Db.cnx);
+      SqlDataReader recordset = Fcmmd.ExecuteReader();
       try
       {
         while (recordset.Read())
@@ -252,7 +252,7 @@ namespace Practica04
       {
         //
       }
-      Fcmd.Dispose();
+      Fcmmd.Dispose();
       Db.cnx.Close();
     }
     public static void BuscarLocalidad()
@@ -260,11 +260,11 @@ namespace Practica04
       frmConsultaLocalidad.dgv.Rows.Clear();
       frmConsultaLocalidad.dgv.Refresh();
       Db.cnx.Open();
-      SqlCommand Lcmd = new SqlCommand("SELECT IDLocalidad, NombreLocalidad " +
-                                       "FROM Localidad " +
-                                       "WHERE NombreLocalidad LIKE '%" + frmConsultaLocalidad.txtBuscar.Text + "%'" +
-                                       "ORDER BY IdLocalidad ASC", Db.cnx);
-      SqlDataReader recordset = Lcmd.ExecuteReader();
+      SqlCommand Lcmmd = new SqlCommand("SELECT IDLocalidad, NombreLocalidad " +
+                                        "FROM Localidad " +
+                                        "WHERE NombreLocalidad LIKE '%" + frmConsultaLocalidad.txtBuscar.Text + "%'" +
+                                        "ORDER BY IdLocalidad ASC", Db.cnx);
+      SqlDataReader recordset = Lcmmd.ExecuteReader();
       try
       {
         while (recordset.Read())
@@ -279,7 +279,7 @@ namespace Practica04
       {
         //
       }
-      Lcmd.Dispose();
+      Lcmmd.Dispose();
       Db.cnx.Close();
     }
   }
