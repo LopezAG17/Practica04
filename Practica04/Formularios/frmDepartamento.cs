@@ -62,8 +62,8 @@ namespace Practica04
       DialogResult res = consultaDepartamento.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtDepartamento.Text = consultaDepartamento.varf1;
-        txtNombreDepartamento.Text = consultaDepartamento.varf2;
+        txtDepartamento.Text = consultaDepartamento.varf0;
+        txtNombreDepartamento.Text = consultaDepartamento.varf1;
       }
     }
     private void btnConsultaFabrica_Click_1(object sender, EventArgs e)

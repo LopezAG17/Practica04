@@ -186,16 +186,24 @@ namespace Practica04
     // ------------------------------------------------------------------
     private void btnConsultaDepto_Click(object sender, EventArgs e)
     {
-      frmConsultaDepartamento consulta = new frmConsultaDepartamento();
-      consulta.ShowDialog();
+      frmConsultaDepartamento consultaDepartamento = new frmConsultaDepartamento();
+      DialogResult resultado = consultaDepartamento.ShowDialog();
+      if (resultado == DialogResult.OK)
+      {
+        txtDepartamento.Text = consultaDepartamento.varf0;
+      }
     }
     // ------------------------------------------------------------------
     // Evento Boton Consulta Fabrica
     // ------------------------------------------------------------------
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
     {
-      frmConsultaFabrica consulta = new frmConsultaFabrica();
-      consulta.ShowDialog();
+      frmConsultaFabrica consultaFabrica = new frmConsultaFabrica();
+      DialogResult resultado = consultaFabrica.ShowDialog();
+      if (resultado == DialogResult.OK)
+      {
+        txtFabrica.Text = consultaFabrica.varf0;
+      }
     }
     // ----------------------------------------------------------
     // esta funcion recibe un parametro de entrada de tipo string
@@ -215,7 +223,12 @@ namespace Practica04
     private void btnConsulta_Click(object sender, EventArgs e)
     {
       frmConsultaPosicion ConsultaPosicion = new frmConsultaPosicion();
-      ConsultaPosicion.ShowDialog();
+      DialogResult resultado = ConsultaPosicion.ShowDialog();
+      if (resultado == DialogResult.OK)
+      {
+        txtPosicion.Text = ConsultaPosicion.varf0;
+        txtNombrePosicion.Text = ConsultaPosicion.varf1;
+      }
     }
     private void btnDepatamento_Click(object sender, EventArgs e)
     {

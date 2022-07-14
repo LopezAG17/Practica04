@@ -12,9 +12,9 @@ namespace Practica04
 {
   public partial class frmConsultaFabrica : Form
   {
+    public string varf0;
     public string varf1;
     public string varf2;
-    public string varf3;
     public frmConsultaFabrica()
     {
       InitializeComponent();
@@ -58,9 +58,9 @@ namespace Practica04
     {
       try
       { //Data grid View 
-        varf1 = dgv.CurrentRow.Cells[0].Value.ToString();
-        varf2 = dgv.CurrentRow.Cells[1].Value.ToString();
-        varf3 = dgv.CurrentRow.Cells[2].Value.ToString();
+        varf0 = dgv.CurrentRow.Cells[0].Value.ToString();
+        varf1 = dgv.CurrentRow.Cells[1].Value.ToString();
+        varf2 = dgv.CurrentRow.Cells[2].Value.ToString();
         this.Close();
       }
       catch

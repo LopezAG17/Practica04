@@ -47,8 +47,8 @@ namespace Practica04
       DialogResult res = Consulta.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtNombreFabrica.Text = Consulta.varf2;
-        txtLocalidad.Text = Consulta.varf3;
+        txtNombreFabrica.Text = Consulta.varf1;
+        txtLocalidad.Text = Consulta.varf2;
       }
     }
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
