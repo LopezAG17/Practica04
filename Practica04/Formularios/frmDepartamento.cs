@@ -58,13 +58,23 @@ namespace Practica04
     }
     private void btnConsulta_Click(object sender, EventArgs e)
     {
-      frmConsultaDepartamento consulta = new frmConsultaDepartamento();
-      consulta.Show();
+      frmConsultaDepartamento consultaDepartamento = new frmConsultaDepartamento();
+      DialogResult res = consultaDepartamento.ShowDialog();
+      if (res == DialogResult.OK)
+      {
+        txtDepartamento.Text = consultaDepartamento.varf1;
+        txtNombreDepartamento.Text = consultaDepartamento.varf2;
+      }
     }
     private void btnConsultaFabrica_Click_1(object sender, EventArgs e)
     {
       frmConsultaFabrica ConsultaFabrica = new frmConsultaFabrica();
-      ConsultaFabrica.Show();
+      DialogResult res = ConsultaFabrica.ShowDialog();
+      if (res == DialogResult.OK)
+      {
+        txtFabrica.Text = ConsultaFabrica.varf1;
+        lblFabrica.Text = ConsultaFabrica.varf2;
+      }
     }
 
     private void btnPosiciones_Click(object sender, EventArgs e)

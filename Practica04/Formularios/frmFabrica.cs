@@ -44,12 +44,21 @@ namespace Practica04
     private void btnConsulta_Click(object sender, EventArgs e)
     {
       frmConsultaFabrica Consulta = new frmConsultaFabrica();
-      Consulta.ShowDialog();
+      DialogResult res = Consulta.ShowDialog();
+      if (res == DialogResult.OK)
+      {
+        txtNombreFabrica.Text = Consulta.varf2;
+        txtLocalidad.Text = Consulta.varf3;
+      }
     }
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
     {
-      frmConsultaFabrica ConsultaLocalidad = new frmConsultaFabrica();
-      ConsultaLocalidad.ShowDialog();
+      frmConsultaLocalidad ConsultaLocalidad = new frmConsultaLocalidad();
+      DialogResult res = ConsultaLocalidad.ShowDialog();
+      if (res == DialogResult.OK)
+      {
+        txtLocalidad.Text = ConsultaLocalidad.varf1;
+      }
     }
     private void btnPosiciones_Click(object sender, EventArgs e)
     {

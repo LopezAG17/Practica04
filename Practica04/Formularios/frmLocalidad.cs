@@ -30,8 +30,12 @@ namespace Practica04
     }
     private void btnConsulta_Click(object sender, EventArgs e)
     {
-      frmConsultaLocalidad Consulta = new frmConsultaLocalidad();
-      Consulta.ShowDialog();
+      frmConsultaLocalidad ConsultaLocalidad = new frmConsultaLocalidad();
+      DialogResult res = ConsultaLocalidad.ShowDialog();
+      if (res == DialogResult.OK)
+      {
+        txtNombreLocalidad.Text = ConsultaLocalidad.varf1;
+      }
     }
 
     private void btnDepatamento_Click(object sender, EventArgs e)
