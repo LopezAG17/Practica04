@@ -27,7 +27,6 @@ namespace Practica04
         e.Handled = true;
         if (txtDepartamento.Text.Trim() != string.Empty)
         {
-          // mueve el cursor al textbox txtDepartamento
           txtNombreDepartamento.Focus();
         }
       }
@@ -37,7 +36,6 @@ namespace Practica04
       if (txtDepartamento.Text.Trim() != string.Empty)
       {
         SQl.SelectDepartamento();
-        Console.WriteLine("Funciona");
       }
     }
     private void btnLimpiar_Click(object sender, EventArgs e)

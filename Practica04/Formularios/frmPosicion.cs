@@ -190,7 +190,7 @@ namespace Practica04
       DialogResult resultado = consultaDepartamento.ShowDialog();
       if (resultado == DialogResult.OK)
       {
-        txtDepartamento.Text = consultaDepartamento.varf0;
+        Seleccion.Departamentos();
       }
     }
     // ------------------------------------------------------------------
@@ -226,8 +226,7 @@ namespace Practica04
       DialogResult resultado = ConsultaPosicion.ShowDialog();
       if (resultado == DialogResult.OK)
       {
-        txtPosicion.Text = ConsultaPosicion.varf0;
-        txtNombrePosicion.Text = ConsultaPosicion.varf1;
+        Seleccion.Posiciones();
       }
     }
     private void btnDepatamento_Click(object sender, EventArgs e)

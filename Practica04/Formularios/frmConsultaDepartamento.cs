@@ -12,8 +12,8 @@ namespace Practica04
 {
   public partial class frmConsultaDepartamento : Form
   {
-    public string varf0;
-    public string varf1;
+    public string varf0 = dgv.CurrentRow.Cells[0].Value.ToString();
+    public string varf1 = dgv.CurrentRow.Cells[1].Value.ToString();
     public frmConsultaDepartamento()
     {
       InitializeComponent();
