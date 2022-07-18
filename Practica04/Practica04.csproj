@@ -48,6 +48,7 @@
     <Compile Include="Classes\clsBusca.cs" />
     <Compile Include="Classes\ConvertImage.cs" />
     <Compile Include="Classes\Eventos.cs" />
+    <Compile Include="Classes\Seleccion.cs" />
     <Compile Include="Classes\SQl.cs" />
     <Compile Include="Formularios\frmConsultaDepartamento.cs">
       <SubType>Form</SubType>
