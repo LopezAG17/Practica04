@@ -57,9 +57,8 @@ namespace Practica04
     private void btnSeleccionar_Click(object sender, EventArgs e)
     {
       try
-      { //Data grid View 
-        varf0 = dgv.CurrentRow.Cells[0].Value.ToString();
-        varf1 = dgv.CurrentRow.Cells[1].Value.ToString();
+      {
+        DialogResult = DialogResult.OK;
         this.Close();
       }
       catch

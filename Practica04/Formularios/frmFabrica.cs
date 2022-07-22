@@ -43,12 +43,11 @@ namespace Practica04
     }
     private void btnConsulta_Click(object sender, EventArgs e)
     {
-      frmConsultaFabrica Consulta = new frmConsultaFabrica();
-      DialogResult res = Consulta.ShowDialog();
+      frmConsultaFabrica ConsultaFabrica = new frmConsultaFabrica();
+      DialogResult res = ConsultaFabrica.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtNombreFabrica.Text = Consulta.varf1;
-        txtLocalidad.Text = Consulta.varf2;
+        SelectFabrica.Fabricas();
       }
     }
     private void btnConsultaFabrica_Click(object sender, EventArgs e)
@@ -57,7 +56,7 @@ namespace Practica04
       DialogResult res = ConsultaLocalidad.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtLocalidad.Text = ConsultaLocalidad.varf1;
+        SelectFabrica.Localidad();
       }
     }
     private void btnPosiciones_Click(object sender, EventArgs e)

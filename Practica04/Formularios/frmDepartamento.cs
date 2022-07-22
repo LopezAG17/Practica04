@@ -60,8 +60,7 @@ namespace Practica04
       DialogResult res = consultaDepartamento.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtDepartamento.Text = consultaDepartamento.varf0;
-        txtNombreDepartamento.Text = consultaDepartamento.varf1;
+        SelectDepartamento.Departamentos();
       }
     }
     private void btnConsultaFabrica_Click_1(object sender, EventArgs e)
@@ -70,8 +69,7 @@ namespace Practica04
       DialogResult res = ConsultaFabrica.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtFabrica.Text = ConsultaFabrica.varf1;
-        lblFabrica.Text = ConsultaFabrica.varf2;
+        SelectDepartamento.Fabricas();
       }
     }
 

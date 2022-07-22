@@ -40,7 +40,6 @@
       btnLimpiar = new System.Windows.Forms.Button();
       btnGuardar = new System.Windows.Forms.Button();
       btnConsultaFabrica = new System.Windows.Forms.Button();
-      lblFabrica = new System.Windows.Forms.Label();
       txtFabrica = new System.Windows.Forms.TextBox();
       label4 = new System.Windows.Forms.Label();
       btnFabrica = new System.Windows.Forms.Button();
@@ -77,7 +76,7 @@
       // 
       lblFabricaNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       lblFabricaNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      lblFabricaNombre.Location = new System.Drawing.Point(286, 75);
+      lblFabricaNombre.Location = new System.Drawing.Point(286, 127);
       lblFabricaNombre.Name = "lblFabricaNombre";
       lblFabricaNombre.Size = new System.Drawing.Size(262, 20);
       lblFabricaNombre.TabIndex = 24;
@@ -173,15 +172,6 @@
       btnConsultaFabrica.UseVisualStyleBackColor = false;
       btnConsultaFabrica.Click += new System.EventHandler(btnConsultaFabrica_Click_1);
       // 
-      // lblFabrica
-      // 
-      lblFabrica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      lblFabrica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      lblFabrica.Location = new System.Drawing.Point(286, 128);
-      lblFabrica.Name = "lblFabrica";
-      lblFabrica.Size = new System.Drawing.Size(262, 20);
-      lblFabrica.TabIndex = 34;
-      // 
       // txtFabrica
       // 
       txtFabrica.Location = new System.Drawing.Point(188, 128);
@@ -231,7 +221,6 @@
       btnLocalidad.Text = "Maestro de Localidad";
       btnLocalidad.UseVisualStyleBackColor = false;
       btnLocalidad.Click += new System.EventHandler(btnLocalidad_Click);
-
       // 
       // frmDepartamento
       // 
@@ -243,7 +232,6 @@
       Controls.Add(btnFabrica);
       Controls.Add(btnPosiciones);
       Controls.Add(btnConsultaFabrica);
-      Controls.Add(lblFabrica);
       Controls.Add(txtFabrica);
       Controls.Add(label4);
       Controls.Add(btnSalir);
@@ -268,7 +256,7 @@
     }
 
     #endregion
-
+    public static System.Windows.Forms.Label lblFabrica;
     public static System.Windows.Forms.Button btnLocalidad;
     public static System.Windows.Forms.Button btnConsulta;
     public static System.Windows.Forms.Label label5;
@@ -282,7 +270,6 @@
     public static System.Windows.Forms.Button btnLimpiar;
     public static System.Windows.Forms.Button btnGuardar;
     public static System.Windows.Forms.Button btnConsultaFabrica;
-    public static System.Windows.Forms.Label lblFabrica;
     public static System.Windows.Forms.TextBox txtFabrica;
     public static System.Windows.Forms.Label label4;
     public static System.Windows.Forms.Button btnFabrica;

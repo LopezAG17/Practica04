@@ -12,8 +12,6 @@ namespace Practica04
 {
   public partial class frmConsultaLocalidad : Form
   {
-    public string varf1;
-    public string varf2;
     public frmConsultaLocalidad()
     {
       InitializeComponent();
@@ -61,8 +59,7 @@ namespace Practica04
     {
       try
       {
-        varf1 = dgv.CurrentRow.Cells[0].Value.ToString();
-        varf2 = dgv.CurrentRow.Cells[1].Value.ToString();
+        DialogResult = DialogResult.OK;
         this.Close();
       }
       catch (Exception)

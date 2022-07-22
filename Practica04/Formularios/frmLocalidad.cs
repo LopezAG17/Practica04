@@ -34,7 +34,7 @@ namespace Practica04
       DialogResult res = ConsultaLocalidad.ShowDialog();
       if (res == DialogResult.OK)
       {
-        txtNombreLocalidad.Text = ConsultaLocalidad.varf1;
+        SelectLocalidad.Localidad();
       }
     }
 

@@ -11,9 +11,36 @@ namespace Practica04
       }
       catch
       {
-
+        // 
       }
     }
+    public static void Departamentos()
+    {
+      try
+      {
+        frmPosicion.txtDepartamento.Text = frmConsultaDepartamento.dgv.CurrentRow.Cells[0].Value.ToString();
+        frmPosicion.lblDepartamento.Text = frmConsultaDepartamento.dgv.CurrentRow.Cells[1].Value.ToString();
+      }
+      catch
+      {
+        // 
+      }
+    }
+    public static void Fabricas()
+    {
+      try
+      {
+        frmPosicion.txtFabrica.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[0].Value.ToString();
+        frmPosicion.lblFabricaNombre.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[1].Value.ToString();
+      }
+      catch
+      {
+        // 
+      }
+    }
+  }
+  public static class SelectDepartamento
+  {
     public static void Departamentos()
     {
       try
@@ -23,23 +50,52 @@ namespace Practica04
       }
       catch
       {
-
+        // 
       }
     }
     public static void Fabricas()
     {
       try
       {
-        frmFabrica.txtFabrica.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[0].Value.ToString();
-        frmFabrica.txtNombreFabrica.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[1].Value.ToString();
-        frmFabrica.txtLocalidad.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[2].Value.ToString();
+        frmDepartamento.txtFabrica.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[0].Value.ToString();
+        frmDepartamento.lblFabricaNombre.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[1].Value.ToString();
       }
       catch
       {
-
+        // 
       }
     }
-    public static void Localidades()
+  }
+  public static class SelectFabrica
+  {
+    public static void Fabricas()
+    {
+      try
+      {
+        frmFabrica.txtFabrica.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[0].Value.ToString();
+        frmFabrica.txtNombreFabrica.Text = frmConsultaFabrica.dgv.CurrentRow.Cells[1].Value.ToString();
+      }
+      catch
+      {
+        // 
+      }
+    }
+    public static void Localidad()
+    {
+      try
+      {
+        frmFabrica.txtLocalidad.Text = frmConsultaLocalidad.dgv.CurrentRow.Cells[0].Value.ToString();
+        frmFabrica.lblLocalidad.Text = frmConsultaLocalidad.dgv.CurrentRow.Cells[1].Value.ToString();
+      }
+      catch
+      {
+        // 
+      }
+    }
+  }
+  public static class SelectLocalidad
+  {
+    public static void Localidad()
     {
       try
       {
@@ -48,7 +104,7 @@ namespace Practica04
       }
       catch
       {
-
+        // 
       }
     }
   }
